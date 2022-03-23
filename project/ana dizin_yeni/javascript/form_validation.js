@@ -18,7 +18,6 @@ $("#sign_up_form").submit(function(event)
   
 	// Regular expressions for validating email and password
 	const MAILREGEXP = /^\S+\s?\@\S+\s?\.\S+\s?$/gi;
-	const PASSREGEXP = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!?@#\$%\^\&*\(\)+=\._-]).*$/g;
   
 	try
 	{
@@ -89,10 +88,10 @@ $("#sign_up_form").submit(function(event)
 	  $password[0].setCustomValidity("Bu alanı doldurmanız gerekmektedir");
 	  $password[0].reportValidity();
 	}
-	else if (passwordVal.match(PASSREGEXP) === null)
+	else if (passwordVal.length < 8)
 	{
 	  valid = 0;
-	  $password[0].setCustomValidity("Şifreniz en az 8 karakterden oluşmalı ve bir büyük harf, bir özel karakter, bir rakam içermelidir");
+	  $password[0].setCustomValidity("Şifreniz en az 8 karakterden oluşmalıdır.");
 	  $password[0].reportValidity();
 	}
 	else if (passwordVal.length > 255)
@@ -305,7 +304,6 @@ $("#sign_in_form").submit(function(event) {
 	  
 	// Regular expressions for validating email and password
 	const MAILREGEXP = /^\S+\s?\@\S+\s?\.\S+\s?$/gi;
-	const PASSREGEXP = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!?@#\$%\^\&*\(\)+=\._-]).*$/g;
   
 	if (emailVal.length === 0)
 	{
@@ -331,10 +329,10 @@ $("#sign_in_form").submit(function(event) {
 	  $password[0].setCustomValidity("Bu alanı doldurmanız gerekmektedir");
 	  $password[0].reportValidity();
 	}
-	else if (passwordVal.match(PASSREGEXP) === null)
+	else if (passwordVal.length < 8)
 	{
 	  valid = 0;
-	  $password[0].setCustomValidity("Şifreniz en az 8 karakterden oluşmalı ve bir büyük harf, bir özel karakter, bir rakam içermelidir");
+	  $password[0].setCustomValidity("Şifreniz en az 8 karakterden oluşmalıdır.");
 	  $password[0].reportValidity();
 	}
 	else if (passwordVal.length > 255)
@@ -546,7 +544,6 @@ $("#forgotten_form").submit(function(event) {
 	  
 	// Regular expressions for validating email and password
 	const MAILREGEXP = /^\S+\s?\@\S+\s?\.\S+\s?$/gi;
-	const PASSREGEXP = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!?@#\$%\^\&*\(\)+=\._-]).*$/g;
   
 	if (emailVal.length === 0){
 		valid = 0;
@@ -602,16 +599,14 @@ $("#reset_form").submit(function(event) {
 	// Get the values of the input forms.
 	var passwordVal = $password.val();
 	var passwordControlVal = $passwordControl.val();
-
-	const PASSREGEXP = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!?@#\$%\^\&*\(\)+=\._-]).*$/g;
    
 	if (passwordVal.length === 0 ){
 		valid = 0;
 		$password[0].setCustomValidity("Bu alanı doldurmanız gerekmektedir");
 		$password[0].reportValidity();
-	}else if (passwordVal.match(PASSREGEXP) === null){
+	}else if (passwordVal.length < 8){
 		valid = 0;
-		$password[0].setCustomValidity("Şifreniz en az 8 karakterden oluşmalı ve bir büyük harf, bir özel karakter, bir rakam içermelidir");
+		$password[0].setCustomValidity("Şifreniz en az 8 karakterden oluşmalıdır.");
 		$password[0].reportValidity();
 	}else if (passwordVal.length > 255){
 		valid = 0;

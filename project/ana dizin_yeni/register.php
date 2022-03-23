@@ -9,11 +9,9 @@ $lname = trim(isset($_POST['lname']) ? $_POST['lname'] : '');
 $email = trim(isset($_POST['email']) ? $_POST['email'] : '');
 $password = isset($_POST['password']) ? $_POST['password'] : '';
 
-// Add salt and hash the password
-$password = password_hash($password, PASSWORD_DEFAULT);
 
 // Validate input
-if (!preg_match("/^\S+\s?\@\S+\s?\.\S+\s?$/i", $email) || !preg_match("/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!\?@#\$%\^\&\*\(\)\+=\._-]).*$/", $password)){
+if (!preg_match("/^\S+\s?\@\S+\s?\.\S+\s?$/i", $email)){
   exit();
 }
 
@@ -29,6 +27,8 @@ if (strlen($password) < 8){
 if (strlen($fname) > 60 || strlen($lname) > 60 || strlen($email) > 255 || strlen($password) > 255){
   exit();
 }
+// Add salt and hash the password
+$password = password_hash($password, PASSWORD_DEFAULT);
 
 // Create a database connection 
 $servername = "127.0.0.1";

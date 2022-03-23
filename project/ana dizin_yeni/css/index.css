@@ -28,6 +28,20 @@ body
 	position: absolute;
 	z-index: -10;
 }
+
+#info_div
+{
+	text-align: center;
+}
+.info_p
+{
+	width: 70%;
+	margin: auto;
+}
+.info_img
+{
+	max-width: 100%;
+}
 .row
 {
 	padding: 0px;
@@ -589,6 +603,11 @@ input:focus:-ms-input-placeholder
 {	
 	#verification_div
 	{
+		width: 100%;
+	}
+	.info_p
+	{
+		margin: auto;
 		width: 100%;
 	}
 	#h1

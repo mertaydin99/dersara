@@ -103,9 +103,9 @@ if(empty($token)){
 <!DOCTYPE html>
 <html lang="tr">
 	<head>
-		<title>TAMAMEN ÜCRETSİZ || dersara.com.tr'de özel dersler veren özel ders öğretmenleri içinden size uygun bir öğretmen bulun veya özel ders verin.</title>
+		<title>TAMAMEN ÜCRETSİZ || Özel ders vermek ve özel ders almak için en doğru adres dersara.com.tr</title>
 		<meta charset="UTF-8">
-		<meta name="description" lang="tr-TR" content="dersara.com.tr ile binlerce özel ders ilanı içinden özel ders veren yüzlerce özel ders öğretmeni bulabilir ya da özel ders verebilirsiniz." />
+		<meta name="description" lang="tr-TR" content="TAMAMEN ÜCRETSİZ || Özel ders vermek ve özel ders almak için en doğru adres dersara.com.tr" />
 		<meta name="keywords" content="dersara, ders ara , dersara.com,
 					dersara.com.tr, dersara.net ozelders.com, superprof,
 					özel ders, ozel ders, ders bul, özelders, özel ders,
@@ -360,6 +360,45 @@ $(document).ready(function(){
 				</div>
 			</div>
 		</div>
+		<div id="info_div">
+			<h1>Öğrenciyseniz</h1>
+			<img src="images/info_search.jpg" alt="Arama Logosu"  class="img-fluid info_img" />
+			<p class="info_p">
+				Ana sayfada arama yapın ve özel ders almak istediğiniz alanı aratın: Tenis, matematik, biyoloji, fen, gitar, yüzme, keman,
+				fizik, kimya, lise sınavı, üniversite sınavı ve aklınıza gelen her alanda arama yapın.				
+			</p>
+			<img src="images/info_filter.jpg" alt="Filtreleme Logosu"  class="img-fluid info_img" />
+			<p class="info_p">
+				Gelen sonuçları filtreleyin. Yüz yüze veya online, istediğiniz şehir ve semtte, istediğiniz ücret aralığında özel ders veren 
+				erkek veya kadın özel ders öğretmenlerini filtreleyin ve bulun.
+			</p>
+			<img src="images/info_demand.jpg" alt="Talep Logosu"  class="img-fluid info_img" />
+			<p class="info_p">
+				Ders talebi oluştur butonuna tıklayın ve sizden istenilen bilgileri girin. Bu bilgiler yalnızca özel ders öğretmeniniz ile paylaşılacak
+				ve sitede görüntülenemeyecektir. Ders talebini başarıyla oluşturduktan sonra başka talepler oluşturun ya da özel ders öğretmeninin sizinle
+				iletişime geçmesini bekleyin.
+			</p>
+			<img src="images/info_contact.jpg" alt="İletişim Logosu"  class="img-fluid info_img" />
+			<p class="info_p">
+				Ders talebinde bulunduğunuz özel ders öğretmeni sizinle belirttiğiniz iletişim kanallarından iletişime geçecektir. Eğer yeterince beklediyseniz ve 
+				geri dönüş alamadıysanız bu özel ders öğretmeninin programının dolu olduğu anlamına gelir. Başka ders talepleri oluşturmaya devam edebilirsiniz. 
+			</p>
+		<h1>Öğretmenseniz</h1>
+		<img src="images/info_register.jpg" alt="Kayıt Logosu"  class="img-fluid info_img" />
+		<p class="info_p">
+			Ana sayfadaki kayıt ol butonuna tıklayınız. Bilgilerinizi girdikten ve öğretmen seçeneğini işaretledikten sonra onay e-postası alacaksınız.
+			Spam(gereksiz) mailler kısmını da kontrol edin ve gelen e-postadaki linke tıklayın. Profile yönlendirileceksiniz.	
+		</p>
+		<img src="images/info_profil.jpg" alt="Profil Logosu"  class="img-fluid info_img" />
+		<p class="info_p">
+			Profil bilgilerinizi doldurun ve ders vermek istediğiniz alanları anahtar kelimeler bölümüne yazın. Profilinizi tamamladıktan sonra artık arama
+			sonuçlarında görünür olacaksınız ve öğrenciler size ders talebi yollayabilecektir.
+		</p>
+		<img src="images/info_contact.jpg" alt="Filtreleme Logosu"  class="img-fluid info_img" />
+		<p class="info_p">
+			Profilim sayfasındaki derslerim bölümünden size gelen ders taleplerini inceleyin ve öğrencilerle iletişime geçin. 
+		</p>
+	</div>
 		<script type="text/javascript" src="javascript/random_image.js"></script>
 		<script type="text/javascript" src="javascript/event_listener.js"></script>
 		<script type="text/javascript" src="javascript/form_validation.js?time=v1"></script>

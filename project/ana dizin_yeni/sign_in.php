@@ -3,11 +3,14 @@ $email = trim(isset($_POST['email']) ? $_POST['email'] : '');
 $password = isset($_POST['password']) ? $_POST['password'] : '';
 
 // Validate input
-if (!preg_match("/^\S+\s?\@\S+\s?\.\S+\s?$/i", $email) || !preg_match("/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!\?@#\$%\^\&\*\(\)\+=\._-]).*$/", $password)){
+if (!preg_match("/^\S+\s?\@\S+\s?\.\S+\s?$/i", $email)){
   exit();
 }
 
 if (empty($email) || empty($password)){
+  exit();
+}
+if (strlen($password) < 8){
   exit();
 }
 if (strlen($email) > 255 || strlen($password) > 255){
