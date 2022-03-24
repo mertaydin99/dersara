@@ -179,6 +179,15 @@ $keyword = $_GET['keyword'];
 	padding: 0px;
 	margin: 0px;
 }
+.verified_div
+{
+	margin: auto;
+	text-align: center;
+}
+.verified_div
+{
+	max-width: 100%;
+}
 .nav-item
 {	
 	display: block;
@@ -1062,6 +1071,7 @@ $(document).ready(function()
 		}
 		fname = result[i]['fname'];
 		lname = result[i]['lname'];
+		verified = result[i]['verified'];
 		gender = result[i]['gender'];
 		title = result[i]['title'];
 		imgUrl = result[i]['img_url'];
@@ -1084,7 +1094,10 @@ $(document).ready(function()
 
 		// Add a profile div.
 		$("#profile_container").append('<div class="profile"><div class="profile_div profile_img_div"><img src="/images/profil_img.png" alt="profil resmi" class="profil_img" width="300px" height="300px" /><br /><button type="submit"  name="submit" value="submit" class="profil_submit">Ders Talebi Oluştur</button></div><div class="profile_div profile_info_div"><div class="info_div"><h1></h1><br /><h2></h2></br /><p></p></div><div class="span_div"><span class="profile_span"><i><b>Saatlik Ücret</b></i></span>	<span class="profile_span"><i><b>Eğitim Türü</b></i></span><br /><span class="profile_span2"><b></b></span><span class="profile_span2"><b></b></span></div></div></div>');
-		
+		if(verified === "true")
+		{
+			$(".profile").eq(i).before('<div class="verified_div"><h1>Bu öğretmen Onaylıdır</h1><img src="/images/blue_tick.jpg" alt="onaylı öğretmen" class="verified" /></div>');
+		}
 		$(".profil_img").eq(i).attr("src", "/uploads/" + imgUrl);
 		fullName = fname + " " + lname.toUpperCase() + ".";
 		$(".info_div").eq(i).children('h1').text(fullName);
@@ -1380,6 +1393,7 @@ $(document).ready(function()
 				{
 					fname = result[i]['fname'];
 					lname = result[i]['lname'];
+					verified = result[i]['verified'];
 					title = result[i]['title'];
 					imgUrl = result[i]['img_url'];
 					introduction = result[i]['introduction'];
@@ -1400,7 +1414,11 @@ $(document).ready(function()
 					}
 
 					// Add a profile div.
-					$("#profile_container").append('<div class="profile"><div class="profile_div profile_img_div"><img src="/images/profil_img.png" alt="profil resmi" class="profil_img" width="200px" height="200px" /><br /><button type="submit"  name="submit" value="submit" class="profil_submit" >Ders Talebi Oluştur</button></div><div class="profile_div profile_info_div"><div class="info_div"><h1></h1><br /><h2></h2></br /><p></p></div><div class="span_div"><span class="profile_span"><i><b>Saatlik Ücret</b></i></span>	<span class="profile_span"><i><b>Eğitim Türü</b></i></span><br /><span class="profile_span2"><b></b></span><span class="profile_span2"><b></b></span></div></div></div>');
+					$("#profile_container").append('<div class="profile"><div class="profile_div profile_img_div"><img src="/images/profil_img.png" alt="profil resmi" class="profil_img" width="300px" height="300px" /><br /><button type="submit"  name="submit" value="submit" class="profil_submit" >Ders Talebi Oluştur</button></div><div class="profile_div profile_info_div"><div class="info_div"><h1></h1><br /><h2></h2></br /><p></p></div><div class="span_div"><span class="profile_span"><i><b>Saatlik Ücret</b></i></span>	<span class="profile_span"><i><b>Eğitim Türü</b></i></span><br /><span class="profile_span2"><b></b></span><span class="profile_span2"><b></b></span></div></div></div>');
+					if(verified === "true")
+					{
+						$(".profile").eq(i).before('<div class="verified_div"><h1>Bu öğretmen Onaylıdır</h1><img src="/images/blue_tick.jpg" alt="onaylı öğretmen" class="verified" /></div>');
+					}
 					if(imgUrl !== null)
 					{
 						$(".profil_img").eq(i).attr("src", "/uploads/" + imgUrl);

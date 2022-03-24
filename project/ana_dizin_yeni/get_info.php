@@ -20,7 +20,7 @@ if ($conn->connect_error)
 }
 
 // Get the profile info
-$stmt = $conn->prepare("SELECT teachers.fname, LEFT(teachers.lname, 1) AS lname, profile.img_url, profile.gender, profile.title, profile.introduction, profile.preference, profile.price FROM profile INNER JOIN teachers ON profile.user_id = teachers.id WHERE (MATCH(profile.keyword) AGAINST(?) OR MATCH(profile.introduction) AGAINST(?)) LIMIT 1000");
+$stmt = $conn->prepare("SELECT teachers.fname, LEFT(teachers.lname, 1) AS lname, teachers.email, profile.img_url, profile.gender, profile.title, profile.introduction, profile.preference, profile.price FROM profile INNER JOIN teachers ON profile.user_id = teachers.id WHERE (MATCH(profile.keyword) AGAINST(?) OR MATCH(profile.introduction) AGAINST(?)) LIMIT 1000");
 $stmt->bind_param("ss", $keyword, $keyword);
 $stmt->execute();
 $result = $stmt->get_result(); // get the mysqli result
@@ -28,6 +28,14 @@ if ($result->num_rows > 0)
 {
 	while ($row = $result->fetch_assoc()) 
 	{		
+		if ((preg_match("/@hacettepe.edu.tr/i", $row['email']) || preg_match("/@metu.edu.tr/i", $row['email']) || preg_match("/@boun.edu.tr/i", $row['email'])) )
+		{
+			$row['verified'] = "true";
+		}		  
+		else
+		{
+			$row['verified'] = "false";
+		}
 		$row['fname'] = htmlspecialchars($row['fname']);
 		$row['lname'] = htmlspecialchars($row['lname']);
 		$row['title'] = htmlspecialchars($row['title']);
