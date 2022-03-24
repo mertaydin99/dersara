@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /profil.php/
+Allow: /
+
+Sitemap: https://www.dersara.com.tr/sitemap.xml
