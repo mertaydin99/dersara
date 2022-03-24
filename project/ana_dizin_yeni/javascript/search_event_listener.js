@@ -86,6 +86,26 @@ $(document).ready(function()
 		$("#sidebar").css("width", "0px");
 		$("#main").css("margin-left", "0px");
 	})
+	$("#info_banner").on("click", function()
+	{
+		$("#sidebar").css("width", "0px");
+		$("#main").css("margin-left", "0px");
+	})
+	$("#search").on("click", function()
+	{
+		$("#sidebar").css("width", "0px");
+		$("#main").css("margin-left", "0px");
+	})
+	$("#database_error").on("click", function()
+	{
+		$("#sidebar").css("width", "0px");
+		$("#main").css("margin-left", "0px");
+	})
+	$("#not_found").on("click", function()
+	{
+		$("#sidebar").css("width", "0px");
+		$("#main").css("margin-left", "0px");
+	})
 	// Get cookie Function
 	function getCookie(cname) 
 	{
