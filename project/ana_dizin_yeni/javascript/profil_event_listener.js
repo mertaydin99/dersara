@@ -112,6 +112,20 @@ $(document).ready(function()
 		}
 	  }
 	})
+	$("#logo").on("click", function()
+	{
+		window.location.href = "index.html";
+	})
+	$("#body").on("click", function()
+	{
+		$("#sidebar").css("width", "0px");
+		$("#main").css("margin-left", "0px");
+	})
+	$("#lessons_div").on("click", function()
+	{
+		$("#sidebar").css("width", "0px");
+		$("#main").css("margin-left", "0px");
+	})
     $(".js-example-basic-single").select2();
 	  // When user clicks sign out delete the cookie and return to the home page
 	  $(".sign_out").click(function()

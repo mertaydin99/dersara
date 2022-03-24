@@ -77,6 +77,15 @@ $(document).ready(function()
 		}
 	  }
 	})
+	$("#logo").on("click", function()
+	{
+		window.location.href = "index.html";
+	})
+	$("#body").on("click", function()
+	{
+		$("#sidebar").css("width", "0px");
+		$("#main").css("margin-left", "0px");
+	})
 	// Get cookie Function
 	function getCookie(cname) 
 	{

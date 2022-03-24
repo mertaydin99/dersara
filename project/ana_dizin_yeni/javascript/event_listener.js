@@ -135,6 +135,11 @@ $(".sign_in").click(function()
   $("#sign_in_form").removeClass("hidden");
 });
 
+$("#body").on("click", function()
+{
+  $("#sidebar").css("width", "0px");
+  $("#main").css("margin-left", "0px");
+})
 // When the x button is clicked hide the form
 $("#sign_up_icon").click(function() 
 {
