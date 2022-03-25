@@ -204,6 +204,13 @@ if ($conn->connect_error)
 										<option value="67">Zonguldak</option>
 								</select>
 							</div>
+							<p id="price"><b>Saatlik Ücret</b></p>
+							<div class="price-slider"><span>
+  								<input value="50" min="10" max="1000" step="10" type="range" name="price" id="slider_min"/>
+							</div>
+							<div id="price_div">
+								<span id="min">50TL</span>
+							</div>
 							<div id="topic">
 								<p><b>Hangi alanla ya da alanlarla ilgili eğitim vermek istediğinizi seçiniz</b></p>
 								<ul>

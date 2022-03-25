@@ -554,7 +554,7 @@ input:focus
 {
 	display: block;
 	margin-top: 3%;
-	width: 100%;
+	width: 50%;
 	height: 100px;
 	color: white;
 	background-color: rgb(41, 125, 221);
@@ -920,7 +920,7 @@ input:focus
 					<div>
 						<h1>Filtrele</h1><hr>
 					</div>
-					<p><b>edu.tr Onaylı Öğretmenler</b></p>
+					<p><b>edu.tr onaylı öğretmenler</b></p>
 					<input type="checkbox" class="type filter" id="verification_checkbox" />
 					<p><b>Ders Yeri</b></p>
 					<label for="online" class="type_label">Online</label>
@@ -1023,12 +1023,12 @@ input:focus
 					</select>
 					<p id="price"><b>Saatlik Ücret</b></p>
 					<div class="price-slider">
-  						<input value="5" min="5" max="600" step="5" type="range" id="slider_min" class="filter"/>
-  						<input value="600" min="5" max="600" step="5" type="range" id="slider_max" class="filter" />
+  						<input value="10" min="10" max="1000" step="10" type="range" id="slider_min" class="filter"/>
+  						<input value="1000" min="10" max="1000" step="10" type="range" id="slider_max" class="filter" />
 					</div>
 					<div id="price_div">
-						<span id="min">5TL</span>
-						<span id="max">600TL</span>
+						<span id="min">10TL</span>
+						<span id="max">1000TL</span>
 					</div>
 				</div>
 				<div id="profile_container">

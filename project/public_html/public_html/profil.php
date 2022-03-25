@@ -979,7 +979,7 @@ input[type=number] {
 							</div>
 							<p id="price"><b>Saatlik Ücret</b></p>
 							<div class="price-slider"><span>
-  								<input value="50" min="5" max="600" step="5" type="range" name="price" id="slider_min"/>
+  								<input value="50" min="10" max="1000" step="10" type="range" name="price" id="slider_min"/>
 							</div>
 							<div id="price_div">
 								<span id="min">50TL</span>
