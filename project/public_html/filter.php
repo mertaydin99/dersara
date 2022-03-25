@@ -180,9 +180,12 @@ if ($result->num_rows > 0)
 {
 	while ($row = $result->fetch_assoc()) 
 	{		
-		if ((preg_match("/@hacettepe.edu.tr/i", $row['email']) || preg_match("/@metu.edu.tr/i", $row['email']) || preg_match("/@boun.edu.tr/i", $row['email'])) )
+		if ((preg_match("/@[a-zA-Z0-9.+-]+\.edu.tr/i", $row['email'])))
 		{
 			$row['verified'] = "true";
+			$arr = explode('@', $row['email']);
+			$university = $arr[1];
+			$row['university'] = $university;
 		}		  
 		else
 		{
