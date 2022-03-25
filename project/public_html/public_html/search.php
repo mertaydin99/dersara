@@ -1320,9 +1320,9 @@ $(document).ready(function()
 	 $(".sign_out").click(function()
 	 {
 		var delete_cookie = function(name) 
-		{
-			document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;' + "; path=/;" + "domain=localhost;";
-		};
+				   {
+						 document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;' + "; path=/;" + "domain=.dersara.com.tr;;";
+				   };
 		delete_cookie("logged_in");
 		delete_cookie("type");
    
