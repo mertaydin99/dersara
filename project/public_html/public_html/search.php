@@ -1469,11 +1469,6 @@ $(document).ready(function()
 					{
 						preference = "Yüzyüze ve Online";
 					}
-					counter = 0;
-					if(verified === "false")
-						{
-							counter += 1;
-						}
 
 					// Add a profile div.
 					$("#profile_container").append('<div class="profile"><div class="profile_div profile_img_div"><img src="/images/profil_img.png" alt="profil resmi" class="profil_img" width="300px" height="300px" /><br /><button type="submit"  name="submit" value="submit" class="profil_submit" >Ders Talebi Oluştur</button></div><div class="profile_div profile_info_div"><div class="info_div"><h1></h1><br /><h2></h2></br /><p></p></div><div class="span_div"><span class="profile_span"><i><b>Saatlik Ücret</b></i></span>	<span class="profile_span"><i><b>Eğitim Türü</b></i></span><br /><span class="profile_span2"><b></b></span><span class="profile_span2"><b></b></span></div></div></div>');
@@ -1481,6 +1476,7 @@ $(document).ready(function()
 					{
 						$(".profile").eq(i).before('<div class="verified_div"><h1></h1><img src="/images/blue_tick.jpg" alt="onaylı öğretmen" class="verified" /></div>');
 						$(".verified_div").eq(i- counter).children("h1").text("Aşağıdaki öğretmen " + university + " adresiyle onaylıdır." );
+						counter += 1;
 					}
 					if(imgUrl !== null)
 					{
