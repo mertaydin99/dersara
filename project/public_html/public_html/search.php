@@ -918,8 +918,11 @@ input:focus
 						</select>
 					</div>
 					<div>
-						<h1>Filtrele</h1><hr>
+						<h1>Filtrele</h1>
+						<label id="is_filter_label" for="is_filter" class="hidden">Filtreleme Seçeneklerini Görmek İçin Sağdaki Kutuya Tıklayın</label>
+						<input type="checkbox" class ="type hidden" id="is_filter" /><hr />
 					</div>
+					<div id="filter_options">
 					<p><b>edu.tr onaylı öğretmenler</b></p>
 					<input type="checkbox" class="type filter" id="verification_checkbox" />
 					<p><b>Ders Yeri</b></p>
@@ -1029,6 +1032,7 @@ input:focus
 					<div id="price_div">
 						<span id="min">10TL</span>
 						<span id="max">1000TL</span>
+					</div>
 					</div>
 				</div>
 				<div id="profile_container">
@@ -1194,6 +1198,20 @@ $(document).ready(function()
 		  $("#sidebar").css("width", "0px");
 		  $("#main").css("margin-left", "0px");
 	  })
+	  $("#is_filter").removeClass("hidden");
+	  $("#is_filter_label").removeClass("hidden");
+	  $("#filter_options").addClass("hidden");
+	  $("#is_filter").on("change", function()
+	  {
+		if($(this).is(':checked'))
+		{
+			$("#filter_options").removeClass("hidden");
+		}
+		else
+		{
+			$("#filter_options").addClass("hidden");
+		}
+	  })
 	}
 	 
 	else 
@@ -1214,6 +1232,17 @@ $(document).ready(function()
 		  $("#main").css("margin-left", "0px");
 		}
 	  })
+	  $("#is_filter").on("change", function()
+	  {
+		if($(this).is(':checked'))
+		{
+			$("#filter_options").removeClass("hidden");
+		}
+		else
+		{
+			$("#filter_options").addClass("hidden");
+		}
+	  })
 	}
 
 	$(window).on('resize', function()
@@ -1232,6 +1261,30 @@ $(document).ready(function()
 		{
 		  $("#sidebar").removeClass("hidden");
 		}
+		if($("#is_filter").hasClass("hidden"))
+		{
+			$("#is_filter").removeClass("hidden");
+		}
+		if($("#is_filter_label").hasClass("hidden"))
+		{
+			$("#is_filter_label").removeClass("hidden");
+		}
+		if($("#is_filter").is(':checked'))
+		{
+			if($("#filter_options").hasClass("hidden"))
+			{
+				$("#filter_options").removeClass("hidden");
+			}
+		}
+		else
+		{
+			if(!$("#filter_options").hasClass("hidden"))
+			{
+				$("#filter_options").addClass("hidden");
+			}
+		}
+		
+		
 	  }
 	  else
 	  {
@@ -1246,6 +1299,18 @@ $(document).ready(function()
 		if($("#not_mobile").hasClass("hidden"))
 		{
 		  $("#not_mobile").removeClass("hidden");
+		}
+		if(!$("#is_filter").hasClass("hidden"))
+		{
+			$("#is_filter").addClass("hidden");
+		}
+		if(!$("#is_filter_label").hasClass("hidden"))
+		{
+			$("#is_filter_label").addClass("hidden");
+		}
+		if($("#filter_options").hasClass("hidden"))
+		{
+			$("#filter_options").removeClass("hidden");
 		}
 	  }
 	})
