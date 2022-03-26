@@ -191,6 +191,11 @@ if ($result->num_rows > 0)
 		{
 			$row['verified'] = "false";
 		}
+		foreach ($row as $key => $value)
+		{
+			$row[$key] = htmlspecialchars($row[$key]);
+
+		}
 		$resultArray[] = $row;
 	}
 	$result = json_encode($resultArray);

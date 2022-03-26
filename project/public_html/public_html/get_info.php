@@ -20,7 +20,7 @@ if ($conn->connect_error)
 }
 
 // Get the profile info
-$stmt = $conn->prepare("SELECT teachers.fname, LEFT(teachers.lname, 1) AS lname, teachers.email, profile.img_url, profile.gender, profile.title, profile.introduction, profile.preference, profile.price FROM profile INNER JOIN teachers ON profile.user_id = teachers.id WHERE (MATCH(profile.keyword) AGAINST(?) OR MATCH(profile.introduction) AGAINST(?)) LIMIT 1000");
+$stmt = $conn->prepare("SELECT teachers.fname, LEFT(teachers.lname, 1) AS lname, teachers.email, profile.img_url, profile.gender, profile.title, profile.introduction, profile.preference, profile.price FROM profile INNER JOIN teachers ON profile.user_id = teachers.id WHERE (MATCH(profile.keyword) AGAINST(?) OR MATCH(profile.introduction) AGAINST(?)) LIMIT 300");
 $stmt->bind_param("ss", $keyword, $keyword);
 $stmt->execute();
 $result = $stmt->get_result(); // get the mysqli result
@@ -33,7 +33,7 @@ if ($result->num_rows > 0)
 			$row['verified'] = "true";
 			$arr = explode('@', $row['email']);
 			$university = $arr[1];
-			$row['university'] = $university;
+			$row['university'] = htmlspecialchars($university);
 		}		  
 		else
 		{
