@@ -470,7 +470,7 @@ input:focus
 .profile
 {
 	display: flex;
-	margin-bottom:  10%;
+	margin-bottom:  5%;
 	background-color: white;
 }
 .profile_div
@@ -1148,19 +1148,6 @@ $(document).ready(function()
 	}
 		$(".profil_submit").click(function() 
 		{
-			$("#img_div").empty();
-			if($("#success_div").length)
-			{
-				$("#success_div").remove();
-			}
-			else if($("#fail_div").length)
-			{
-				$("#fail_div").remove();
-			}
-			if(	$("#demand_submit").length)
-			{
-				$("#demand_submit").remove();
-			}
 			$demandForm = $("#demand_div");
 			$demandForm.removeClass("hidden");
 			$profil_img =  $(this).prev().prev().clone();
