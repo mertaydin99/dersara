@@ -185,7 +185,7 @@ if ($result->num_rows > 0)
 			$row['verified'] = "true";
 			$arr = explode('@', $row['email']);
 			$university = $arr[1];
-			$row['university'] = $university;
+			$row['university'] = htmlspecialchars($university);
 		}		  
 		else
 		{
