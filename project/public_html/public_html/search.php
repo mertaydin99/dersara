@@ -533,6 +533,10 @@ input:focus
 	margin-right: 3%;
 
 }
+.select2-container--default .select2-selection--single
+{
+	width: 200px !important;
+}
 #demand_form
 {
 	display: inline-block;
