@@ -647,6 +647,7 @@ input:focus
   	  	overflow-y: scroll;
     	overflow-x: hidden;
 		width: 100%;
+		height: 100%;
 		z-index: 12;
 		background-color: white;
 	}
