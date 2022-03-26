@@ -1181,6 +1181,7 @@ $("#online").on("click", function()
 				// This script send an ajax request to filter.php
 $(document).ready(function() 
 {
+	$('select').select2();
 	if (Modernizr.mq('(max-width: 1025px)')) 
 	{
 	  $("#not_mobile").addClass("hidden");
