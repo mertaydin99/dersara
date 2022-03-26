@@ -661,7 +661,7 @@ input:focus
 		position: absolute;
 		right: 10%;
 		width: 30%;	
-		height: 5%;
+		height: 6%;
 		margin-top: 2%;
 	}
 	.profile
