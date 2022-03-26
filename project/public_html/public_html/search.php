@@ -276,6 +276,7 @@ input:focus
 	width: 10%;
 	position: relative;
 	right: 11%;
+	height: 50px;
 	cursor: pointer;
 	background-color: rgb(235,100,130);
 	color: white;
@@ -489,7 +490,6 @@ input:focus
 	height: 30%;
 	color: white;
 	background-color: rgb(41, 125, 221);
-	margin-top: 20px;
 }
 .profil_img
 {
@@ -514,13 +514,12 @@ input:focus
 
 #demand_div
 {
-	position: fixed;
+	position: absolute;
 	top: 0;
     bottom: 0;
-    position: fixed;
-    overflow-y: scroll;
     overflow-x: hidden;
 	width: 100%;
+	height: 500%;
 	z-index: 12;
 	background-color: white;
 }
@@ -641,14 +640,30 @@ input:focus
 		flex-direction: column;
 		margin-left: 20%;
 	}
+	#demand_div
+	{
+		position: fixed;
+	top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+	width: 100%;
+	height: 100%;;
+	z-index: 12;
+	background-color: white;
+	}
+	#demand_submit
+	{
+		width: 100%;
+	}
 	#search_submit
 	{
 	
 		position: absolute;
 		right: 10%;
 		width: 30%;	
-		height: 5%;
-		margin-top: 2%;
+		height: 6%;
+		margin-top: 1%;
 	}
 	.profile
 	{
@@ -825,6 +840,15 @@ input:focus
 		margin-left: initial;
 	}
 }
+@media only screen and (max-width: 285.98px)
+{
+	#search_submit
+	{
+		margin-top: 0%;
+		height: 8%;
+	}	
+}
+
 
 			</style>
 	  	<script type="text/javascript">
@@ -1564,6 +1588,19 @@ $(document).ready(function()
 		}
 		$(".profil_submit").click(function() 
 		{
+			$("#img_div").empty();
+			if($("#success_div").length)
+			{
+				$("#success_div").remove();
+			}
+			else if($("#fail_div").length)
+			{
+				$("#fail_div").remove();
+			}
+			if(	$("#demand_submit").length)
+			{
+				$("#demand_submit").remove();
+			}
 			$demandForm = $("#demand_div");
 			$demandForm.removeClass("hidden");
 			$profil_img =  $(this).prev().prev().clone();
@@ -1594,19 +1631,6 @@ $(document).ready(function()
 	$("#demand_icon").click(function()
 	{
 		$("#demand_div").addClass("hidden");
-		$("#img_div").empty();
-		if($("#success_div").length)
-		{
-			$("#success_div").remove();
-		}
-		else if($("#fail_div").length)
-		{
-			$("#fail_div").remove();
-		}
-		if(	$("#demand_submit").length)
-		{
-			$("#demand_submit").remove();
-		}
 	})
 
 	$("#fail_icon").click(function()
