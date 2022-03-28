@@ -315,7 +315,7 @@ input:focus
 { 
 	height: 20px;
 	width: 20px;
-	margin-left: 90%;
+	margin-left: 95%;
 }
 #select2city
 {
@@ -669,6 +669,7 @@ input:focus
 	{
 		display: flex;
 		flex-direction: column;
+		margin-bottom: 10%;
 	}
 	#search_input
 	{
