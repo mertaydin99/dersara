@@ -837,7 +837,7 @@ input:focus
 	}
 	.profile_span
 	{
-		margin-left: initial;
+		margin-left: 5%;
 	}
 }
 @media only screen and (max-width: 285.98px)
