@@ -536,6 +536,10 @@ input:focus
 {
 	width: 200px !important;
 }
+.select2-selection__arrow
+{
+	left: 180px !important;
+}
 #demand_form
 {
 	display: inline-block;
@@ -603,6 +607,10 @@ input:focus
 	margin: auto;
 	font-size: larger;
 	font-weight: bold;
+}
+#province
+{
+		width: 90%;
 }
 
 
@@ -683,7 +691,7 @@ input:focus
 	}
 	#province
 	{
-		width: 100%;
+		width: 90%;
 	}
 	#profile_container
 	{
