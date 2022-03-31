@@ -344,6 +344,15 @@ input:focus
 	top: 20%;
 	padding-top: 4%;
 }
+#accordion
+{
+	width: 70%;
+	text-align: center;
+	margin: auto;
+	margin-top: 3%;
+
+
+}
 
 /* sign_up and sign_in form css */
 #sign_up_form
@@ -781,6 +790,10 @@ input:focus:-ms-input-placeholder
 		margin: auto;
 		width: 100%;
 	}
+	#accordion
+	{
+		width: 100%;
+	}
 	#h1
 	{
 		width: 750px;
@@ -1041,7 +1054,7 @@ a.close {
 				<div class="container-fluid" id="warning_body">
 					<div class="container-fluid" id="noscript_img_container">
 						<img src="images/warning.png" alt="Uyarı İkonu"  class="img-fluid" id="warning_img" />
-						<h1 id="noscript_h1">Sitemizi kullanabilmeniz için tarayıcı ayarlarından Javascript desteğini etkinleştirmeniz gerekmektedir. </h1>
+						<p id="noscript_h1"><b>Sitemizi kullanabilmeniz için tarayıcı ayarlarından Javascript desteğini etkinleştirmeniz gerekmektedir.</b></p>
 					</div>
 				</div>
 			</div>		
@@ -1084,7 +1097,7 @@ a.close {
 			<div class="container-fluid" id="body">
 				<form id="sign_up_form" class="hidden">
 					<fieldset>
-						<img src="images/close_icon.png" id="sign_up_icon" class="close_icon" />
+						<img src="images/close_icon.png" alt="Kapatma İkonu" id="sign_up_icon" class="close_icon" />
 						<legend>Kaydolun</legend>
 						<p id="radio_p">Üyelik tipinizi seçin:</p>
 						<div id="teacher_radio">
@@ -1113,7 +1126,7 @@ a.close {
 				</form>
 				<form id="sign_in_form" class="hidden">
 					<fieldset>
-						<img src="images/close_icon.png" id="sign_in_icon" class="close_icon" />
+						<img src="images/close_icon.png" id="sign_in_icon" alt ="Kapatma İkonu" class="close_icon" />
 						<legend>Hesabınıza Giriş Yapın</legend>
 						<input type="text" placeholder="E-posta adresiniz" name="email" id="sign_in_email" class="sign_input"
 						       title="" /><br />
@@ -1132,35 +1145,35 @@ a.close {
 					</fieldset>
 				</form>
 				<div id="verification_div" class="hidden">
-						<img src="images/close_icon.png" id="verification_icon" class="close_icon" />
-						<h1 id="verification_h1"></h1>
+						<img src="images/close_icon.png" id="verification_icon" alt="Kapatma İkonu" class="close_icon" />
+						<h2 id="verification_h1"></h2>
 						<p id="verification_p"><b></b></p>
 				</div>
 				<form id="forgotten_form" class="hidden">
 					<fieldset>
-						<img src="images/close_icon.png" id="forgotten_icon" class="close_icon" />
+						<img src="images/close_icon.png" id="forgotten_icon" alt="Kapatma İkonu" class="close_icon" />
 						<legend>Şifrenizi Değiştirin</legend>
 						<input type="text" placeholder="E-posta adresiniz" name="email" id="forgotten_email" class="sign_input" title="" /><br />
 						<button type="submit" id="forgotten_submit"  class="sign_submit" >Kurtarma E-postası Gönder</button>
 					</fieldset>
 				</form>
 				<div id="after_sign_up" class="hidden explain_div">
-					<img src="images/close_icon.png" id="after_sign_up_icon" class="close_icon" />
+					<img src="images/close_icon.png" id="after_sign_up_icon" alt="Kapatma İkonu" class="close_icon" />
 					<legend id="explain_legend">Kaydınız Tamamlanamadı</legend>
-					<img src="images/warning.png" id="error_img" class="img-fluid" />
-					<h1 id="explain_h1">Veritabanına erişilemedi. Lütfen kısa bir süre sonra tekrar deneyiniz</h1>
+					<img src="images/warning.png" id="error_img" alt="Uyarı Simgesi" class="img-fluid" />
+					<p id="explain_h1"><b>Veritabanına erişilemedi. Lütfen kısa bir süre sonra tekrar deneyiniz</b></p>
 				</div>
 				<div id="after_sign_in" class="hidden explain_div">
-					<img src="images/close_icon.png" id="after_sign_in_icon" class="close_icon" />
+					<img src="images/close_icon.png" id="after_sign_in_icon" alt="Kapatma İkonu" class="close_icon" />
 					<legend id="explain_legend">Giriş Yapılamadı</legend>
-					<img src="images/warning.png" id="error_img" class="img-fluid" />
-					<h1 id="explain_h1">Veritabanına erişilemedi. Lütfen kısa bir süre sonra tekrar deneyiniz</h1>
+					<img src="images/warning.png" id="error_img" alt="Uyarı Sembolü" class="img-fluid" />
+					<p id="explain_h1"><b>Veritabanına erişilemedi. Lütfen kısa bir süre sonra tekrar deneyiniz</b></p>
 				</div>
 				<div id="after_forgotten" class="hidden explain_div">
-					<img src="images/close_icon.png" id="after_forgotten_icon" class="close_icon" />
+					<img src="images/close_icon.png" id="after_forgotten_icon" alt="Kapatma İkonu" class="close_icon" />
 					<legend id="explain_legend">Giriş Yapılamadı</legend>
-					<img src="images/warning.png" id="error_img" class="img-fluid" />
-					<h1 id="explain_h1">Veritabanına erişilemedi. Lütfen kısa bir süre sonra tekrar deneyiniz</h1>
+					<img src="images/warning.png" id="error_img" alt="Uyarı Sembolü" class="img-fluid" />
+					<p id="explain_h1"><b>Veritabanına erişilemedi. Lütfen kısa bir süre sonra tekrar deneyiniz</b></p>
 				</div>
 				<h1 id="h1">Bütçenize uygun, yüz yüze ya da online eğitim veren bir özel ders öğretmeni bulun. </h1>
 				<div id="search">
@@ -1171,46 +1184,47 @@ a.close {
 			</div>
 		</div>
 		<div id="info_div">
-			<h1>Öğrenciyseniz</h1>
-			<img src="images/info_search.webp" alt="Arama Logosu"  class="img-fluid info_img" />
+			<h3>Öğrenciyseniz</h3>
+			<img src="images/info_search.webp" alt="Arama Logosu" title="Arama Logosu" class="img-fluid info_img" />
 			<p class="info_p">
 				Ana sayfada arama yapın ve özel ders almak istediğiniz alanı arayın: Tenis, matematik, biyoloji, fen, gitar, yüzme, keman,
 				fizik, kimya, İngilizce, yabancı dil, lise sınavı, üniversite sınavı, ilköğretim, ortaokul ve aklınıza gelen her alanda arama yapın.				
 			</p>
-			<img src="images/info_filter.webp" alt="Filtreleme Logosu"  class="img-fluid info_img" />
+			<img src="images/info_filter.webp" alt="Filtreleme Logosu" title="Filtreleme Logosu"  class="img-fluid info_img" />
 			<p class="info_p">
 				Gelen sonuçları filtreleyin. Yüz yüze veya online, istediğiniz şehir ve semtte, istediğiniz ücret aralığında özel ders veren 
 				erkek veya kadın özel ders öğretmenlerini filtreleyin ve bulun.
 			</p>
-			<img src="images/info_demand.webp" alt="Talep Logosu"  class="img-fluid info_img" />
+			<img src="images/info_demand.webp" alt="Talep Logosu" title="Talep Logosu" class="img-fluid info_img" />
 			<p class="info_p">
 				Ders talebi oluştur butonuna tıklayın ve sizden istenilen bilgileri girin. Bu bilgiler yalnızca özel ders öğretmeniniz ile paylaşılacak
 				ve sitede görüntülenemeyecektir. Ders talebini başarıyla oluşturduktan sonra başka talepler oluşturun ya da özel ders öğretmeninin sizinle
 				iletişime geçmesini bekleyin.
 			</p>
-			<img src="images/info_contact.webp" alt="İletişim Logosu"  class="img-fluid info_img" />
+			<img src="images/info_contact.webp" alt="İletişim Logosu"  title="İletişim Logosu" class="img-fluid info_img" />
 			<p class="info_p">
 				Ders talebinde bulunduğunuz özel ders öğretmeni sizinle belirttiğiniz iletişim kanallarından iletişime geçecektir. Eğer yeterince beklediyseniz ve 
 				geri dönüş alamadıysanız bu özel ders öğretmeninin programının dolu olduğu anlamına gelir. Başka ders talepleri oluşturmaya devam edebilirsiniz. 
 			</p>
-		<h1>Öğretmenseniz</h1>
-		<img src="images/info_register.webp" alt="Kayıt Logosu"  class="img-fluid info_img" />
+		<h3>Öğretmenseniz</h3>
+		<img src="images/info_register.webp" alt="Kayıt Logosu" title="Kayıt Logosu" class="img-fluid info_img" />
 		<p class="info_p">
 			Ana sayfadaki kayıt ol butonuna tıklayınız. edu.tr e-posta adresleriyle kayıt olursanız
 			profilinizde mavi tik gözükecektir bu sayede öğrencilerin daha çok ilgisini çekebilirsiniz. 
 			Bilgilerinizi girdikten ve öğretmen seçeneğini işaretledikten sonra onay e-postası alacaksınız.
 			Spam(gereksiz) mailler kısmını da kontrol edin ve gelen e-postadaki linke tıklayın. Profile yönlendirileceksiniz.	
 		</p>
-		<img src="images/info_profil.webp" alt="Profil Logosu"  class="img-fluid info_img" />
+		<img src="images/info_profil.webp" alt="Profil Logosu" title="Profil Logosu" class="img-fluid info_img" />
 		<p class="info_p">
 			Profil bilgilerinizi doldurun ve ders vermek istediğiniz alanları anahtar kelimeler bölümüne yazın. Profilinizi tamamladıktan sonra artık arama
 			sonuçlarında görünür olacaksınız ve öğrenciler size ders talebi yollayabilecektir.
 		</p>
-		<img src="images/info_contact.webp" alt="Filtreleme Logosu"  class="img-fluid info_img" />
+		<img src="images/info_contact.webp" alt="Filtreleme Logosu" title="Filtreleme Logosu" class="img-fluid info_img" />
 		<p class="info_p">
 			Profilim sayfasındaki derslerim bölümünden size gelen ders taleplerini inceleyin ve öğrencilerle iletişime geçin. 
 		</p>
 	</div>
+
 
 		<script type="text/javascript">
 
@@ -1739,7 +1753,7 @@ $("#sign_up_form").submit(function(event)
 				   function setCookie(cName, cValue, hours) 
 					{
 					  let date = new Date();
-					  date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+					  date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 					  const expires = "expires=" + date.toUTCString();
 					 document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 			
@@ -1757,7 +1771,7 @@ $("#sign_up_form").submit(function(event)
 				   function setCookie(cName, cValue, hours) 
 					{
 					  let date = new Date();
-					  date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+					  date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 					  const expires = "expires=" + date.toUTCString();
 					 document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 				   }	
@@ -1772,7 +1786,7 @@ $("#sign_up_form").submit(function(event)
 			function setCookie(cName, cValue, hours) 
 			{
 				let date = new Date();
-				date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+				date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 				const expires = "expires=" + date.toUTCString();
 				document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 
@@ -1822,7 +1836,7 @@ $("#sign_up_form").submit(function(event)
 				   function setCookie(cName, cValue, hours) 
 					{
 					  let date = new Date();
-					  date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+					  date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 					  const expires = "expires=" + date.toUTCString();
 					 document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 			
@@ -1840,7 +1854,7 @@ $("#sign_up_form").submit(function(event)
 				   function setCookie(cName, cValue, hours) 
 					{
 					  let date = new Date();
-					  date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+					  date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 					  const expires = "expires=" + date.toUTCString();
 					 document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 				   }	
