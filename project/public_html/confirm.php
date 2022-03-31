@@ -103,7 +103,7 @@ if(empty($token)){
 <!DOCTYPE html>
 <html lang="tr">
 	<head>
-		<title>TAMAMEN ÜCRETSİZ || Özel ders vermek ve özel ders almak için en doğru adres dersara.com.tr</title>
+		<title>Özel ders vermek ve özel ders almak için en doğru adres dersara.com.tr</title>
 		<meta charset="UTF-8">
 		<meta name="description" lang="tr-TR" content="TAMAMEN ÜCRETSİZ || Özel ders vermek ve özel ders almak için en doğru adres dersara.com.tr" />
 		<meta name="keywords" content="dersara, ders ara , dersara.com,
