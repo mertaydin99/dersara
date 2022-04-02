@@ -1,3 +1,5 @@
+
+RewriteOptions inherit
 RewriteEngine on
 
 RewriteCond %{HTTP_REFERER} !^$
@@ -10,4 +12,3 @@ RewriteCond %{HTTP_REFERER} !^https://dersara.com.tr$      [NC]
 RewriteCond %{HTTP_REFERER} !^https://www.dersara.com.tr/.*$      [NC]
 RewriteCond %{HTTP_REFERER} !^https://www.dersara.com.tr$      [NC]
 RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
-
