@@ -1501,7 +1501,6 @@ document.getElementById('slider_min').addEventListener('input', function(e) {
 					// Get the values of the input forms.
 					var introductionVal = $introduction.val();
 					var genderVal = $('input[name='gender']:checked').val();
-					console.log(genderVal);
 					var topicVal = $topic.val();
 					var titleVal =  $title.val();
 					var priceVal = $price.val();
@@ -1511,13 +1510,13 @@ document.getElementById('slider_min').addEventListener('input', function(e) {
 					{
 						var cityVal = $('#city option:selected').text();
 						var provinceVal = $('#province').val();
-						if(provinceVal === 0)
+						if(provinceVal.length === 0)
 						{
 							valid = 0;
 							$('#province')[0].setCustomValidity('Bu alanı doldurmanız gereklidir');
 							$('#province')[0].reportValidity();
 						}
-						if(provinceVal > 300)
+						if(provinceVal.length > 300)
 						{
 							valid = 0;
 							$('#province')[0].setCustomValidity('300 karakteri aştınız');
