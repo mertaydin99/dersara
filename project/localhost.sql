@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 02, 2022 at 03:19 PM
+-- Generation Time: Apr 03, 2022 at 07:44 PM
 -- Server version: 8.0.27
 -- PHP Version: 7.3.33
 
@@ -72,7 +72,8 @@ INSERT INTO `profile` (`id`, `img_url`, `gender`, `title`, `introduction`, `city
 (146, 'IMG-20220319-WA0010mm383.jpg', 'm', 'Kodlama Eğitmeni', 'Teknik Lise Bilişim Teknolojileri ve Yazılım bölümünden mezun olduktan sonra İnönü Üniversitesi Bilgisayar ve Öğretim Teknolojileri Eğitimi Bölümü\'nden mezun oldum. 3 yıl özel eğitim kurumunda Bilişim Teknolojileri ve Yazılım Öğretmeni olarak görev yaptım. 4 yıldır MEB bünyesinde öğretmen olarak çalışıyorum. Lise yıllarımdan beri kodlama ve yazılım üzerine eğitimler alıp proje ve yarışmalar için çalışmalar yapıyorum. Temel algoritma eğitimi, kodlama, yazılımın temelleri, Scratch , Mbot, Arduino, temel elektronik bilgisive projeler konusunda uzmanlığa sahibim.', 27, 'Şehitkamil ve Şahinbey', 'both', 75, 'kodlama  arduino mbot yazılım bilgisayar teknoloji algoritma ilkokul ortaokul ', 185),
 (151, 'memoomm397.jpg', 'm', 'Bilkent ingilizce-fransızca mütercim tercümanlık mezunu ve toronto\'da master yapmış öğretmenden ders', 'korkularınızı yenmeyi ve çekingenliğinizi kırmada yanınızda olacağım hiç zor değil aslında. Sadece ezber gramer odaklı değil konuşarak öğreneceğiz. Biraz zorlanmadan istediğimiz hedefe ulaşamayız. Ders dışında da her türlü sorunuza ve tıkandığınız yerlerde cevap verip çıkığınız bu yolda yanınızda olup hep destek vereceğim.', 6, 'çayyolu', 'both', 100, 'ingilizce başlangıç toefl yds speaking', 192),
 (152, 'profil_imgmm401.png', 'f', 'KİMYA MÜHENDİSİNDEN ÖZEL DERS', 'Kimya mühendisiyim.4senedir kimya,matematik ve ingilizce uzerine dersler vermekteyim', NULL, NULL, 'online', 100, 'matematik\r\nkimya\r\nİngilizce\r\nİlkokul-ortaokul-lise', 194),
-(153, 'image0mm407.jpeg', 'f', 'Boğaziçi Üniversitesi İngilizce Öğretmenliği öğrencisinden özel ders', 'Boğaziçi Üniversitesi İngilizce Öğretmenliği bölümü hazırlık öğrencisiyim. Daha öncesinde ilk ve ortaöğretim kademesindeki öğrencilerle özel ders tecrübem oldu. Dersleri zoom üzerinden online olarak veya yüzyüze veriyorum. İlkokul, ortaokul ve lise öğrencilerine İngilizce ve Türkçe derslerinde özel ders verebilirim.Özellikle LGS ve YDT sınavına hazırlanan öğrencilerle sınava yönelik soru çözümleri ve özel dersler yapabilirim.', NULL, NULL, 'online', 50, 'türkçe İngilizce İngilizce ortaokul İngilizce ilkokul İngilizce lgs İngilizce ydt türkçe lgs', 197);
+(153, 'image0mm407.jpeg', 'f', 'Boğaziçi Üniversitesi İngilizce Öğretmenliği öğrencisinden özel ders', 'Boğaziçi Üniversitesi İngilizce Öğretmenliği bölümü hazırlık öğrencisiyim. Daha öncesinde ilk ve ortaöğretim kademesindeki öğrencilerle özel ders tecrübem oldu. Dersleri zoom üzerinden online olarak veya yüzyüze veriyorum. İlkokul, ortaokul ve lise öğrencilerine İngilizce ve Türkçe derslerinde özel ders verebilirim.Özellikle LGS ve YDT sınavına hazırlanan öğrencilerle sınava yönelik soru çözümleri ve özel dersler yapabilirim.', NULL, NULL, 'online', 50, 'türkçe İngilizce İngilizce ortaokul İngilizce ilkokul İngilizce lgs İngilizce ydt türkçe lgs', 197),
+(154, '7c50a0d3-e16a-460d-92ae-08f842bef64fmm409.jpg', 'm', '12 yıllık Akademisyenden İngilizce dersi', 'ODTÜ İngilizce Öğretmenliği bölümünden onur öğrencisi olarak mezun oldum. Bölüme Türkiye 170.si olarak girdim. Halen Türkiye\'de en başarılı ilk beş üniversite arasında gösterilen bir devlet okulunda Öğretim Görevlisi (+ material developer & curriculum designer) olarak çalışıyorum. Daha önce ilköğretim dahil her düzeyde ingilizce öğretmenliği yaptım. Özel bir üniversitede hazırlık bölümünde tüm seviyelerde 5 sene koordinatörlük yaptım ve Modern Dillerde Bölüm derslerine girdim. Tüm seviyelerin müfredatını düzenleme ve sınavlarını hazırlama konusunda tecrübeliyim. Ayrıca, ünlü bir dil kursunda da Yds ve Yökdile yönelik çalıştım.\r\ntoplam tecrübem 12 yıl. Yökdil skorum 100.', NULL, NULL, 'both', 350, 'yds, yökdil, toefl, ielts, genel ingilizce, iş ingilizcesi ve speaking', 198);
 
 -- --------------------------------------------------------
 
@@ -96,7 +97,7 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `fname`, `lname`, `email`, `password`, `token`, `status`, `last_sign_in`) VALUES
-(220, 'Mert', 'Aydın', 'mertaydin991@hotmail.com', '$2y$10$1xIvTREC5zNSGmj07J7xkeTupuajfQDLSEXozg2wKB6D1mm.vyYx6', '', 1, '2022-03-25 15:53:18'),
+(220, 'Mert', 'Aydın', 'mertaydin991@hotmail.com', '$2y$10$1xIvTREC5zNSGmj07J7xkeTupuajfQDLSEXozg2wKB6D1mm.vyYx6', '', 1, '2022-04-02 19:39:11'),
 (221, 'Ayşe', 'Taşlıca', 'ataslica353535@gmail.com', '$2y$10$.sQ0w8oPRmJ9lUY2deAC1eihSyspX5REk9xz6Yxf1GRnc2C0onxga', '', 1, '2022-03-24 14:49:42'),
 (223, 'Yalçın', 'Akgungor', 'akgungor1999@gmail.com', '$2y$10$AxewUPSSiizMVyE4JVz6O.dN1gISrRZvBizzr626hMAaIfPBYDoMS', '', 1, '2022-03-29 10:40:28');
 
@@ -134,7 +135,8 @@ INSERT INTO `teachers` (`id`, `fname`, `lname`, `email`, `password`, `token`, `s
 (194, 'Kbr', 'Htc', 'kbrhtc13@gmail.com', '$2y$10$czx6RVUSKG/kL74kzTfuNuKAs4fR.KOXMhIIAkIaifuRz/xvHpT6O', '', 1, '2022-03-29 07:23:40'),
 (195, 'Nihal Gökçe', 'Aslan', 'aslannihalgokce@gmail.com', '$2y$10$KKuur6JHZfPDA1hrBrD9MOm6An4Q9WG4TN707KlLML.fUuVqWqV1a', 'e33e5f3f3bd4c50dabc8ab3b0a6e3110', 0, '2022-03-30 07:58:32'),
 (196, 'Eda', 'Güneş', 'edaaguness7@gmail.com', '$2y$10$xkvFeEJENYfW/8ok4z/29ep36.C4glWUMA//DINH.vFtyThNkBZ9y', '', 1, '2022-03-30 08:15:53'),
-(197, 'Nihal Gökçe', 'Aslan', 'nihal.aslan@boun.edu.tr', '$2y$10$sNFYgRWa.5e8E3Nr/EthWu9JKCY1MdNXjN1VCnfnEkrOqtYlKFylO', '', 1, '2022-04-02 08:47:11');
+(197, 'Nihal Gökçe', 'Aslan', 'nihal.aslan@boun.edu.tr', '$2y$10$sNFYgRWa.5e8E3Nr/EthWu9JKCY1MdNXjN1VCnfnEkrOqtYlKFylO', '', 1, '2022-04-02 08:47:11'),
+(198, 'Yağız', 'Dikkatli', 'yagizdikkatli@hotmail.com', '$2y$10$cws1dCsNHRI6hyH2G7csLu.iZ4MajF337.3M1BVV9K0hayXxzcWG.', '', 1, '2022-04-03 12:18:33');
 
 --
 -- Indexes for dumped tables
@@ -188,7 +190,7 @@ ALTER TABLE `lesson_demands`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
 
 --
 -- AUTO_INCREMENT for table `students`
@@ -200,7 +202,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=198;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
 
 --
 -- Constraints for dumped tables
