@@ -194,7 +194,7 @@ body
 	position: relative;
 	display: block;
 }
-#background-img
+.background-img
 {
 	height: 100%;
 	width: 100%;
@@ -278,6 +278,10 @@ li a:hover
 	height: 100px;
 	width: 830px;
 	margin: auto;
+}
+.img_mobile
+{
+	display: none;
 }
 #search_form
 {
@@ -783,6 +787,14 @@ input:focus:-ms-input-placeholder
 /* Medium devices (Tablets and small laptops, less than 1000px) */
 @media only screen and (max-width: 999.98px) 
 {	
+	.img_desktop
+	{
+		display: none;
+	}
+	.img_mobile
+	{
+		display: initial;
+	}
 	#verification_div
 	{
 		width: 100%;
@@ -1062,7 +1074,8 @@ a.close {
 			</div>		
 		</noscript>
 		<div class="container-fluid main_container">
-			<img src="images/viyolin.webp" alt="Viyolin Dersi Alan Bir Öğrenci" class="img-fluid" id="background-img" />
+			<img src="images/viyolin.webp" alt="Viyolin Dersi Alan Bir Öğrenci" class="img-fluid background-img img_desktop" />
+			<img src="images/viyolin _mobile.webp" alt="Viyolin Dersi Alan Bir Öğrenci" class="img_fluid background-img img_mobile" />
 			<nav class="navbar navbar-light bg-light bg-transparent" id="navbar">
 				<div id="sidebar" class="sidebar">
 					<ul>
