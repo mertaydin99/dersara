@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 04, 2022 at 12:02 AM
+-- Generation Time: Apr 17, 2022 at 12:48 PM
 -- Server version: 8.0.27
 -- PHP Version: 7.3.33
 
@@ -74,7 +74,9 @@ INSERT INTO `profile` (`id`, `img_url`, `gender`, `title`, `introduction`, `city
 (152, 'profil_imgmm401.png', 'f', 'KİMYA MÜHENDİSİNDEN ÖZEL DERS', 'Kimya mühendisiyim.4senedir kimya,matematik ve ingilizce uzerine dersler vermekteyim', NULL, NULL, 'online', 100, 'matematik\r\nkimya\r\nİngilizce\r\nİlkokul-ortaokul-lise', 194),
 (153, 'image0mm407.jpeg', 'f', 'Boğaziçi Üniversitesi İngilizce Öğretmenliği öğrencisinden özel ders', 'Boğaziçi Üniversitesi İngilizce Öğretmenliği bölümü hazırlık öğrencisiyim. Daha öncesinde ilk ve ortaöğretim kademesindeki öğrencilerle özel ders tecrübem oldu. Dersleri zoom üzerinden online olarak veya yüzyüze veriyorum. İlkokul, ortaokul ve lise öğrencilerine İngilizce ve Türkçe derslerinde özel ders verebilirim.Özellikle LGS ve YDT sınavına hazırlanan öğrencilerle sınava yönelik soru çözümleri ve özel dersler yapabilirim.', NULL, NULL, 'online', 50, 'türkçe İngilizce İngilizce ortaokul İngilizce ilkokul İngilizce lgs İngilizce ydt türkçe lgs', 197),
 (154, '7c50a0d3-e16a-460d-92ae-08f842bef64fmm409.jpg', 'm', '12 yıllık Akademisyenden İngilizce dersi', 'ODTÜ İngilizce Öğretmenliği bölümünden onur öğrencisi olarak mezun oldum. Bölüme Türkiye 170.si olarak girdim. Halen Türkiye\'de en başarılı ilk beş üniversite arasında gösterilen bir devlet okulunda Öğretim Görevlisi (+ material developer & curriculum designer) olarak çalışıyorum. Daha önce ilköğretim dahil her düzeyde ingilizce öğretmenliği yaptım. Özel bir üniversitede hazırlık bölümünde tüm seviyelerde 5 sene koordinatörlük yaptım ve Modern Dillerde Bölüm derslerine girdim. Tüm seviyelerin müfredatını düzenleme ve sınavlarını hazırlama konusunda tecrübeliyim. Ayrıca, ünlü bir dil kursunda da Yds ve Yökdile yönelik çalıştım.\r\ntoplam tecrübem 12 yıl. Yökdil skorum 100.', 34, NULL, 'both', 350, 'yds, yökdil, toefl, ielts, genel ingilizce, iş ingilizcesi ve speaking', 198),
-(157, 'profil_imgmm411.png', 'm', 'Özel Ders Verilir', 'İlköğretim 1.sınıftan üniversite hazırlık grubuna kadar her yaştan her kademede öğrenciye birebir yada toplu ders verilir... ', 1, 'Seyhan, Ceyhan, Sarıçam, Çukurova... ', 'both', 40, 'türkçe\r\ntürk dili ve edebiyatı', 199);
+(157, 'profil_imgmm411.png', 'm', 'Özel Ders Verilir', 'İlköğretim 1.sınıftan üniversite hazırlık grubuna kadar her yaştan her kademede öğrenciye birebir yada toplu ders verilir... ', 1, 'Seyhan, Ceyhan, Sarıçam, Çukurova... ', 'both', 40, 'türkçe\r\ntürk dili ve edebiyatı', 199),
+(158, 'F8FB764F-3880-4F03-B415-88E917893213mm421.jpeg', 'm', 'Dokuz Eylül Üniversitesi Mezunu 13 Yıllık Devlet Okulu Çalışma Tecrübeli Matematik Öğretmeni', '2009 yılında Dokuz Eylül Üniversitesi İlköğretim Matematik Öğretmenliği bölümünden mezun oldum. 13 yıldır devlet okullarında çalışmaktayım. 8 sınıf öğrencilerinin LGS’ye hazırlanması ve 5. 6. 7. sınıf öğrencileri için okula destek olarak özel ders vermekteyim. Özel ders konusunda da 10 yılı aşkın tecrübem var. Pandemi dönemi ile birlikte online özel ders tecrübe ve altyapımı da geliştirdim. Bireysel ya da grup dersi yapabilirim. ', 48, 'Milas', 'both', 150, 'matematik ortaokul 5, 6, 7, 8', 204),
+(159, '12185220_10153681837077418_942073624537701231_o (1)mm423.jpg', 'f', 'İngilizce Öğretmeni', 'Hacettepe İngilizce Öğretmenliği mezunu 12 yıllık öğretmenim. 9 yıldır MEB bünyesinde çalışıyorum. Öncesinde bir süre Amerika\'da yaşadım ve öğretmenliğim boyunca İtalya, İspanya, Fransa gibi Avrupa ülkeleri ile çeşitli projelerde yer aldım. Özel derslere öğrencilik yıllarımda başladım ve yıllardır devam ediyorum. Yeniliklere ayak uydurmayı seven, küçük yaş gruplarıyla da arası iyi, iletişim-empati yönü yüksek biriyim. Öğrencinin ihtiyacına yönelik program hazırlayıp takip eşliğinde eksiklerini gidermek isterim.', NULL, NULL, 'online', 200, 'İngilizce okul öncesi-ilkokul-ortaokul-lise-üniversite\r\nyds toefl ielts\r\nspeaking/conversation\r\n', 205);
 
 -- --------------------------------------------------------
 
@@ -128,7 +130,7 @@ INSERT INTO `teachers` (`id`, `fname`, `lname`, `email`, `password`, `token`, `s
 (182, 'Kadriye', 'inal', 'kadriyeinal54@gmail.com', '$2y$10$5NCui.wpwxn5r8ezVK279u2kNpjkQ7zYvLTdCuHEyM2zM1SudTgz2', '', 1, '2022-03-24 13:08:53'),
 (185, 'Burak', 'Karakol', 'pc_kiyatrist@hotmail.com', '$2y$10$hgIyWoxJhPUSNcj9ZYyss.PNaXa7aYiDuJr5WrlBAXU3Kx.b2eIxm', '', 1, '2022-03-24 21:20:17'),
 (186, 'Sami Orçun', 'Kortunay', 'sami.kortunay@tau.edu.tr', '$2y$10$V7fqE3Y1Q/UiqtqAq5FZLuncnYCVBmJjavA1KYTQHOJpwxZjrYYq2', '', 1, '2022-03-24 21:55:05'),
-(189, 'Mert', 'Aydın', 'mertaydin99@hotmail.com', '$2y$10$q1OjoPx4eCRr7ca0kkIXsuOl.tECQE6aVO1n0292PCe8.u8jJX4Zq', '', 1, '2022-04-03 17:38:51'),
+(189, 'Mert', 'Aydın', 'mertaydin99@hotmail.com', '$2y$10$q1OjoPx4eCRr7ca0kkIXsuOl.tECQE6aVO1n0292PCe8.u8jJX4Zq', '', 1, '2022-04-05 17:28:38'),
 (190, 'Süheyl', 'Karatekin', 'süheylkaratekin@hacettepe.edu.tr', '$2y$10$bnDwYSRYbZ65isJRkN2sAeAzxNcVv..QYOM5Wc2JTlUxfLVXfp7ki', 'e36fbc1ad0f576a9b37956a7024ae014', 0, '2022-03-26 21:19:08'),
 (191, 'Songül', 'Karaman', 'songulkaraman@hacettepe.edu.tr', '$2y$10$cxSoh6t9xnGgmEdI3Rr2n.i6IubG2PRgSlQ50iOwoguj.pxo/3Ahq', 'beda3d4b4acea2ce100059e80ccd865c', 0, '2022-03-27 05:48:17'),
 (192, 'mehmet', 'görgülü', 'mehgorgulu@gmail.com', '$2y$10$ucZgXGHkiQrPtVrZUTA/m.iiQIcpM/7hhP8Zb7Ke6u1Bu7rbn0dSu', '', 1, '2022-03-28 07:29:16'),
@@ -138,7 +140,13 @@ INSERT INTO `teachers` (`id`, `fname`, `lname`, `email`, `password`, `token`, `s
 (196, 'Eda', 'Güneş', 'edaaguness7@gmail.com', '$2y$10$xkvFeEJENYfW/8ok4z/29ep36.C4glWUMA//DINH.vFtyThNkBZ9y', '', 1, '2022-03-30 08:15:53'),
 (197, 'Nihal Gökçe', 'Aslan', 'nihal.aslan@boun.edu.tr', '$2y$10$sNFYgRWa.5e8E3Nr/EthWu9JKCY1MdNXjN1VCnfnEkrOqtYlKFylO', '', 1, '2022-04-02 08:47:11'),
 (198, 'Yağız', 'Dikkatli', 'yagizdikkatli@hotmail.com', '$2y$10$cws1dCsNHRI6hyH2G7csLu.iZ4MajF337.3M1BVV9K0hayXxzcWG.', '', 1, '2022-04-03 12:18:33'),
-(199, 'Ahmet', 'Erdoğan', 'ahmet.erdo@hotmail.com', '$2y$10$G8eYCC9k2E91GZSWuYeI5e1BtbDXroTlWSN9Z88xYQlRHNwmE3oJ2', '', 1, '2022-04-03 20:16:04');
+(199, 'Ahmet', 'Erdoğan', 'ahmet.erdo@hotmail.com', '$2y$10$G8eYCC9k2E91GZSWuYeI5e1BtbDXroTlWSN9Z88xYQlRHNwmE3oJ2', '', 1, '2022-04-03 20:16:04'),
+(200, 'Ahmet', 'Levent', 'ahmetlevent272@gmail.com', '$2y$10$B0veM72GzMP41RsaqUlO0u8CzOW5Zwv331b.fP94CvaE0R.O7HrO.', 'bd7bb4219fefac596dc27882f0e769a6', 0, '2022-04-06 11:55:43'),
+(201, 'Mustafa', 'Arı', 'mustafaari88@gmail.com', '$2y$10$5hDvOjgJ1ZYcKv5cuBcck.G9Oriu8v3nlUKO3E8LjiWwsEHp4Wg0W', '', 1, '2022-04-06 17:02:05'),
+(202, 'Ömer', 'Kurt', 'z.omerkurt@gmail.com', '$2y$10$Pd1YyVNnWsYgIvaNW2qq/.szX9vmZWbjOe3jFfwNby5dc.AMPnlkK', '', 1, '2022-04-13 16:59:11'),
+(203, 'Polat', 'Çokgüngör', '0451120006@ogr.iu.edu.tr', '$2y$10$ar4CPtAdS5O0l6vwKG6LBe28HGNTUGPTGbsMTS4PLAolyHDRxB.6S', '', 1, '2022-04-13 17:23:34'),
+(204, 'Güven', 'Türkmen', 'igturkmen96@aof.anadolu.edu.tr', '$2y$10$Z7MXe5y8bA5zWnsDtKKKpO0Wi7XVfbqv0mYotsi4QbYYTMS10cbI2', '', 1, '2022-04-16 22:40:15'),
+(205, 'çiğdem', 'uysal', 'cigdemjii@hotmail.com', '$2y$10$6Q6vj.siX2HzeN3MAfkLxeRaqk3vjwsfn2dGaj7hf2AFW5PlgkEG6', '', 1, '2022-04-16 21:20:37');
 
 --
 -- Indexes for dumped tables
@@ -192,7 +200,7 @@ ALTER TABLE `lesson_demands`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
 -- AUTO_INCREMENT for table `students`
@@ -204,7 +212,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=206;
 
 --
 -- Constraints for dumped tables
