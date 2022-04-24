@@ -781,6 +781,142 @@ input:focus:-ms-input-placeholder
     color:  grey;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  text-decoration: none;
+}
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #111;
+}
+footer .content{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content p,a{
+  color: #fff;
+}
+footer .content .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+
+}
+footer .content p{
+  text-align: justify;
+}
+footer .content .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .content .lower i{
+  padding-right: 16px;
+}
+footer .content .middle{
+  padding-left: 80px;
+}
+footer .content .middle a{
+  line-height: 32px;
+}
+footer .content .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .content .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: #eb2f06;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #eb2f06;
+  transition: all 0.3s ease-in-out;
+}
+.content .right input[type="submit"]:hover{
+  background: none;
+  color:  #eb2f06;
+}
+footer .content .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.content .media-icons a:hover{
+  border-color: #eb2f06;
+}
+footer .bottom{
+  width: 100%;
+  text-align: right;
+  color: #d9d9d9;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #eb2f06;
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #eb2f06;
+}
+@media (max-width:1100px) {
+  footer .content .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .content .box{
+    width: 50%;
+  }
+  .content .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .content .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content .middle{
+    padding-left: 0;
+  }
+}
 
 
 /* Breakpoint */
@@ -1228,73 +1364,57 @@ a.close {
 			profilinizde mavi tik gözükecektir bu sayede öğrencilerin daha çok ilgisini çekebilirsiniz. 
 			Bilgilerinizi girdikten ve öğretmen seçeneğini işaretledikten sonra onay e-postası alacaksınız.
 			Spam(gereksiz) mailler kısmını da kontrol edin ve gelen e-postadaki linke tıklayın. Profile yönlendirileceksiniz.	
+			Profil bilgilerinizi doldurun ve ders vermek istediğiniz alanları anahtar kelimeler bölümüne yazın. Profilinizi tamamladıktan sonra artık arama
+			sonuçlarında görünür olacaksınız ve öğrenciler size ders talebi yollayabilecektir. Profilim sayfasındaki derslerim bölümünden size gelen ders taleplerini inceleyin ve öğrencilerle iletişime geçin.
 		</p>
 		<img src="images/info_profil.webp" alt="Profil Logosu" title="Profil Logosu" class="img-fluid info_img" />
 		<p class="info_p">
-			Profil bilgilerinizi doldurun ve ders vermek istediğiniz alanları anahtar kelimeler bölümüne yazın. Profilinizi tamamladıktan sonra artık arama
-			sonuçlarında görünür olacaksınız ve öğrenciler size ders talebi yollayabilecektir.
+			
 		</p>
 		<img src="images/info_contact.webp" alt="Filtreleme Logosu" title="Filtreleme Logosu" class="img-fluid info_img" />
 		<p class="info_p">
-			Profilim sayfasındaki derslerim bölümünden size gelen ders taleplerini inceleyin ve öğrencilerle iletişime geçin. 
+	 
 		</p>
 	</div>
-	<div id="accordion">
-		<h2>Özel Ders Vermek İstiyorum</h2>
-		<img src="images/private_tutor.webp" alt="Özel Ders Veren Bir Öğretmen" title="Özel Ders Veren Bir Öğretmen" class="img-fluid info_img" />
-		<p>
-			Özel ders vermek istiyorum diyorsanız doğru yerdesiniz. Üstte belirtilen adımları uygulayın ve dersara.com.tr'deki özel ders öğretmenleri arasına katılın.
-			İster matematik dersi, Türkçe dersi, İngilizce dersi isterseniz başka bir alanda ders alın veya ders verin. Özel ders vermek istiyorum diye google
-			üzerinde arama yapmak bu işin başlangıcıdır. Sitemize kaydolun ve özel ders vermek istiyorum cümlenizi gerçeğe dönüştürelim.
+	<footer>
+   <div class="content">
+     <div class="left box">
+       <div class="upper">
+         <div class="topic">Hakkımızda</div>
+         <p>Hedefimiz özel ders vermeyi ve özel ders almayı ücretsiz hale getirmektir.</p>
+       </div>
+       <div class="lower">
+         <div class="topic">İletişim</div>
+         <div class="phone">
+           <a href="tel:534078334"><i class="fas fa-phone-volume"></i>5340783343</a>
+         </div>
+         <div class="email">
+           <a href="mailto:dersara.com.tr@hotmail.com"><i class="fas fa-envelope"></i>dersara.com.tr@hotmail.com</a>
+         </div>
+       </div>
+     </div>
+     <div class="middle box">
+       <div class="topic">Linkler</div>
+       <div><a href="sorular.html">Nasıl Çalışır?</a></div>
+       <div><a href="blog.html">Blog</a></div>
 
- 		</p>
-		<h2>Matematik Dersi</h2>
-		<p>Şüphesiz çokça talep gören alanlardan biri matematik dersi. Matematik dersi almak istiyorsanız hemen arama yapın ve matematik dersi veren öğretmenlerimizden birisine talep yollayın. Eğer matematik dersi veriyorsanız hemen bir profil oluşturun ve öğrencilerin aramalarında görünür olmaya başlayın.
-			Matematik dersi niçin bu kadar popüler? Matematik dersi hayatımızın her alanında karşımıza çıkan ve sınavlarda da sıkça işimize yarayan bir alandır. Bu sebepten bu alandaki rekabet ve fiyatlar biraz daha fazladır. Ancak endişelenmeyin bütçenize uygun matematik dersi veren bir öğretmen bulabilirsiniz.
-		</p>
-		<h2>Matematik Özel Ders Fiyatları</h2>
-		<p>
-			Üstte bahsedildiği gibi matematik özel ders fiyatları oldukça değişkendir. Matematik özel ders fiyatları bazı alanlara göre daha yüksek görünse de sitemiz yapısı gereği birçok farklı altyapıya sahip öğretmene ev sahipliği yapmaktadır. Bu yüzden sitemizdeki matematik özel ders fiyatları içinde oldukça uygun olanları vardır. Matematik özel ders fiyatları gözünüzü korkutmasın, çözüm burada.
-		</p>
-		<h2>Özel Öğretmen</h2>
-		<p>
-			Özel öğretmenin faydaları saymakla bitmez. Özel öğretmen size daha fazla ilgi gösterir, eksiklerinizi nokta atışı tespit eder. Özel öğretmen size göre bir
-			program çıkarır ve bu programı düzenli olarak günceller. Özel öğretmenin tüm ilgisi sizin üzerinizdedir. ÖZel öğretmen ile çok daha kolay iletişime geçer ve sorunlarınızı anlatabilirsiniz. Özel öğretmen bu sorunları çok daha hızlı bir şekilde çözebilir.
-		</p>
-		<h2>Fizik Öğretmenleri</h2>
-		<p>
-			Sitemiz yeni açıldığından fizik öğretmenleri yeni yeni kayıt olmaktadır. Eğer fizik öğretmenlerinden biriyseniz sitemize kayıt olun ve fizik öğretmenleri araması yapan öğrencilerin aramalarında görünür olun. En iyi fizik öğretmenleri ve öğrencileri buluşturuyoruz
-		</p>
-		<h2>Özel Ders Fiyatları</h2>
-		<p>
-			Üstte belirttiğimiz gibi özel ders fiyatları oldukça değişkendir. Özel ders fiyatları alana, o dönemki trendlere göre değişmektedir. Ancak size şunun garantisini verebiliriz: Sitemizde en ucuzdan en pahalıya çok çeşitli özel ders fiyatları ile ders veren öğretmenler bulunmaktadır ve her geçen gün sayıları artmaktadır. Özel ders fiyatları gözünüzü korkutmasın, dersara.com.tr.
-		</p>
-		<h2>Matematik Öğretmenleri</h2>
-		<p>
-			Sitemizdeki matematik öğretmenleri sayıca her gün artmaktadır. Farklı altyapılardan yetişmiş matematik öğretmenleri ile öğrencileri buluşturuyoruz.
-			Eğer matematik öğretmenlerinden biriyseniz sitemize kaydolun ve sitemizdeki matematik öğretmenleri arasına katılın.
-		</p>
-		<h2>İngilizce Öğretmenler</h2>
-		<p>
-			En iddialı olduğumuz alanlardan biri de ingilizce öğretmenlerimizdir. İngilizce öğretmenler sitemizde ders vermektedir ve içlerinde oldukça kaliteli öğretmenler bulunmaktadır. Buna rağmen İngilizce öğretmenler oldukça uygun fiyatlara ders vermektedir. Hemen sitede İngilizce diye arama yapın ve karşınıza çıkan İngilizce öğretmenler için ders talebinde bulunun.
-		</p
-		<h2>Ders Saat Ücretleri</h2>
-		<p>
-			Üstte belirttiğimiz gibi ders saat ücretleri oldukça değişkendir. Ders saat ücretleri alana, o dönemki trendlere göre değişmektedir. Ancak size şunun garantisini verebiliriz: Sitemizde en ucuzdan en pahalıya çok çeşitli ders saat ücretleri ile ders veren öğretmenler bulunmaktadır ve her geçen gün sayıları artmaktadır. Ders saat ücretleri gözünüzü korkutmasın, dersara.com.tr.
-		</p>
-		<h2>Özel Ders</h2>
-		<p>
-			Özel ders herkesin her dönem ihtiyacı olabilecek bir konudur. Özel ders almak veya vermek bir dönem çoğumuzun aklına gelmiştir. İşte özel ders vermeyi ve özel ders almayı kolaylaştırmak ve ücretsiz hale getirmek için bu siteyi açtık. Özel ders konusunda en iyi hizmeti vermeye çalışıyoruz ve sizi en iyi özel ders öğretmenleri ile buluşturuyoruz.
-		</p>
-
-		<h2>ozelders</h2>
-		<p>
-		  ozelders, süperprof, sahibinden ozel ders, ozelders alani gibi rakiplerimiz de işlerini layıkıyla yapmaktadır. Sitemiz yeni açıldığından sitemiz üzerinde öğretmen bulamazsanız bu tür sitelere bakabilirsiniz. Sonuçta ozelders arayanları istedikleri ozelders öğretmeni ile buluşturmak asıl hedefimizdir. 
-			firmalar 
-		</p>
-
-		
-	</div>
+     </div>
+     <div class="right box">
+       <div class="topic">Bizi Sosyal Medyada Takip Edin</div>
+       <form action="#">
+         <div class="media-icons">
+           <a href="https://www.facebook.com/profile.php?id=100080568344979"><i class="fab fa-facebook-f"></i></a>
+           <a href="https://www.instagram.com/dersara.com.tr/"><i class="fab fa-instagram"></i></a>
+           <a href="https://twitter.com/dersaratr"><i class="fab fa-twitter"></i></a>
+           <a href="https://www.linkedin.com/in/mert-a-754b31235/"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </form>
+     </div>
+   </div>
+   <div class="bottom">
+     <p>Copyright © 2022 <a href="#">dersara.com.tr</a> Tüm hakları saklıdır</p>
+   </div>
+ </footer>
 
 
 
