@@ -1919,7 +1919,7 @@ $("#sign_up_form").submit(function(event)
 				   function setCookie(cName, cValue, hours) 
 					{
 					  let date = new Date();
-					  date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+					  date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 					  const expires = "expires=" + date.toUTCString();
 					 document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 			
@@ -1937,7 +1937,7 @@ $("#sign_up_form").submit(function(event)
 				   function setCookie(cName, cValue, hours) 
 					{
 					  let date = new Date();
-					  date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+					  date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 					  const expires = "expires=" + date.toUTCString();
 					 document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 				   }	
@@ -1952,7 +1952,7 @@ $("#sign_up_form").submit(function(event)
 			function setCookie(cName, cValue, hours) 
 			{
 				let date = new Date();
-				date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+				date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 				const expires = "expires=" + date.toUTCString();
 				document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 
@@ -2002,7 +2002,7 @@ $("#sign_up_form").submit(function(event)
 				   function setCookie(cName, cValue, hours) 
 					{
 					  let date = new Date();
-					  date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+					  date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 					  const expires = "expires=" + date.toUTCString();
 					 document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 			
@@ -2020,7 +2020,7 @@ $("#sign_up_form").submit(function(event)
 				   function setCookie(cName, cValue, hours) 
 					{
 					  let date = new Date();
-					  date.setTime(date.getTime() + ( 1 * 3600 * 1000));
+					  date.setTime(date.getTime() + ( 2 * 3600 * 1000));
 					  const expires = "expires=" + date.toUTCString();
 					 document.cookie = cName + "=" + cValue + "; " + expires + "; path=/;" + "domain=.dersara.com.tr;;";
 				   }	

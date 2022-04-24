@@ -1,13 +1,3 @@
-RewriteEngine on
-
-RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^http://dersara.com.tr/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://dersara.com.tr$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://www.dersara.com.tr/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://www.dersara.com.tr$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://dersara.com.tr/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://dersara.com.tr$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://www.dersara.com.tr/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://www.dersara.com.tr$      [NC]
-RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
-
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.dersara.com.tr$
+RewriteRule ^(.*)$ https://www.dersara.com.tr/$1 [R=301,L]
