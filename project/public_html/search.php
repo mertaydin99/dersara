@@ -274,6 +274,7 @@ input:focus
 {
 	display: inline-block;
 	width: 10%;
+	height: 30px;
 	position: relative;
 	right: 11%;
 	height: 50px;
@@ -941,7 +942,7 @@ input:focus
 			<div id="info_banner">Koronavirüsle ilgili çekinceleriniz varsa online özel ders veren öğretmenleri tercih edebilirsiniz.</div>
 			<div id="search">
 					<form id="search_form" method="GET" action="search.php"><input type="text" name="keyword" id="search_input" value="<?php echo $keyword?>" />
-						<button type="submit" id="search_submit">Aramaya Devam Edin</button>
+						<button type="submit" id="search_submit">Ara</button>
 					</form>
 			</div>
 			<div id="body" class="flex-container2">
