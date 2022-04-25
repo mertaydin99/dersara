@@ -1053,7 +1053,7 @@ input:focus
 							<option value="67">Zonguldak</option>
 						</select>
 						<p><b>(Tercihen) Eğitim Almak İstediğiniz Semti veya Semtleri Arasında Boşluk Bırakarak Yazınız</b></p>
-						<input id="province" class="filter" name="province"></input>
+						<input id="province" class="filter2" name="province"></input>
 					</div>
 					<p id="gender"><b>Öğretmenin Cinsiyeti</b></p>
 					<select id="gender_options" class="filter" >
@@ -1223,6 +1223,7 @@ $("#online").on("click", function()
 })
 			 </script>	
 			<script>
+				var timeoutId = null;
 				// This script send an ajax request to filter.php
 $(document).ready(function() 
 {
@@ -1455,6 +1456,195 @@ $(document).ready(function()
     	
   }
 	// If user clicked the online or face2face or both filter the profiles of teachers
+	$(".filter2").on("input", function() 
+	{		
+		if(timeoutId) {
+			clearTimeout(timeoutId);
+		}
+		 timeoutId = setTimeout(() => {
+			var inputVal = $("#search_input").val();
+		var genderVal = $("#gender_options").val();
+		if($('#face2face').is(':checked'))
+		{
+			var typeVal = "face2face";
+			var cityVal = $("#select2city").val();
+			var provinceVal = $("#province").val();
+		}	
+		else if($('#online').is(':checked'))
+		{
+			var typeVal = "online";
+			var cityVal = null;
+		}
+		else
+		{
+			var typeVal = "none";
+		}
+
+		var minVal = $("#slider_min").val();
+		var maxVal = $("#slider_max").val();
+		var sortVal = $("#sortby").val();
+		
+  		$.getJSON("filter.php", {keyword : inputVal, type: typeVal, city: cityVal, province: provinceVal, gender: genderVal, min: minVal, max: maxVal, sort: sortVal } ,function(result)
+  		{
+			// If there is no result show info_div
+			if(result === "none")
+			{
+				if(!$("#not_found").length)
+				{
+					$("#info_banner").after('<div id="not_found">Arama Sonucunuz Bulunamamıştır.</div>');
+					$("#not_found").focus();
+				}
+				if($("#database_error").length)
+				{
+					$("#database_error").remove();
+				}
+			}
+			else
+			{
+				if($("#not_found").length)
+				{
+					$("#not_found").remove();
+				}
+				if($("#database_error").length)
+				{
+					$("#database_error").remove();
+				}
+			}
+			for(i = 0; i < $(".profile").length; i++)
+			{
+				$(".profile").remove();
+			}
+			for(i = 0; i < $(".verified_div").length; i++)
+			{
+				$(".verified_div").remove();
+			}
+			if(result !== "none")
+			{
+				var counter = 0; 
+				for(i= 0; i < result.length; i++)
+				{
+					
+					fname = result[i]['fname'];
+					lname = result[i]['lname'];
+					verified = result[i]['verified'];
+					university = result[i]['university'];
+					title = result[i]['title'];
+					imgUrl = result[i]['img_url'];
+					introduction = result[i]['introduction'];
+					preference = result[i]['preference'];
+					price = result[i]['price'];
+					if($('#verification_checkbox').is(":checked"))
+					{
+						if(verified === "false")
+						{
+							counter += 1;
+							continue;
+						}
+						else
+						{
+							if(preference === "face2face")
+					{
+						preference = "Yüzyüze";
+					}
+					else if(preference === "online")
+					{
+						preference = "Online";
+					}
+					else if(preference === "both")
+					{
+						preference = "Yüzyüze ve Online";
+					}
+
+					// Add a profile div.
+					$("#profile_container").append('<div class="profile"><div class="profile_div profile_img_div"><img src="/images/profil_img.png" alt="profil resmi" class="profil_img" width="300px" height="300px" /><br /><button type="submit"  name="submit" value="submit" class="profil_submit" >Ders Talebi Oluştur</button></div><div class="profile_div profile_info_div"><div class="info_div"><h1></h1><br /><h2></h2></br /><p></p></div><div class="span_div"><span class="profile_span"><i><b>Saatlik Ücret</b></i></span>	<span class="profile_span"><i><b>Eğitim Türü</b></i></span><br /><span class="profile_span2"><b></b></span><span class="profile_span2"><b></b></span></div></div></div>');
+					if(verified === "true")
+					{
+						$(".profile").eq(i - counter).before('<div class="verified_div"><h1>Aşağıdaki öğretmen ' + university + ' adresiyle onaylıdır.</h1><img src="/images/blue_tick.jpg" alt="onaylı öğretmen" class="verified" /></div>');
+					}
+					if(imgUrl !== null)
+					{
+						$(".profil_img").eq(i - counter).attr("src", "/uploads/" + imgUrl);
+					}
+					fullName = fname + " "+ lname.toUpperCase()+".";
+					$(".info_div").eq(i - counter).children('h1').text(fullName);
+					$(".info_div").eq(i - counter).children('h2').text(title);
+					$(".info_div").eq(i - counter).children('p').text(introduction);
+
+					$(".span_div").eq(i - counter).children('.profile_span2').eq(0).text(price);
+					$(".span_div").eq(i - counter).children('.profile_span2').eq(1).text(preference);
+					continue;
+						}
+					}
+
+					if(preference === "face2face")
+					{
+						preference = "Yüzyüze";
+					}
+					else if(preference === "online")
+					{
+						preference = "Online";
+					}
+					else if(preference === "both")
+					{
+						preference = "Yüzyüze ve Online";
+					}
+
+					// Add a profile div.
+					$("#profile_container").append('<div class="profile"><div class="profile_div profile_img_div"><img src="/images/profil_img.png" alt="profil resmi" class="profil_img" width="300px" height="300px" /><br /><button type="submit"  name="submit" value="submit" class="profil_submit" >Ders Talebi Oluştur</button></div><div class="profile_div profile_info_div"><div class="info_div"><h1></h1><br /><h2></h2></br /><p></p></div><div class="span_div"><span class="profile_span"><i><b>Saatlik Ücret</b></i></span>	<span class="profile_span"><i><b>Eğitim Türü</b></i></span><br /><span class="profile_span2"><b></b></span><span class="profile_span2"><b></b></span></div></div></div>');
+					if(verified === "true")
+					{
+						$(".profile").eq(i).before('<div class="verified_div"><h1>Aşağıdaki öğretmen ' + university + ' adresiyle onaylıdır.</h1><img src="/images/blue_tick.jpg" alt="onaylı öğretmen" class="verified" /></div>');
+					}
+					if(imgUrl !== null)
+					{
+						$(".profil_img").eq(i).attr("src", "/uploads/" + imgUrl);
+					}
+					fullName = fname + " "+ lname.toUpperCase()+".";
+					$(".info_div").eq(i).children('h1').text(fullName);
+					$(".info_div").eq(i).children('h2').text(title);
+					$(".info_div").eq(i).children('p').text(introduction);
+
+					$(".span_div").eq(i).children('.profile_span2').eq(0).text(price);
+					$(".span_div").eq(i).children('.profile_span2').eq(1).text(preference);
+
+			}
+		}
+		$(".profil_submit").click(function() 
+		{
+			$("#img_div").empty();
+			if($("#success_div").length)
+			{
+				$("#success_div").remove();
+			}
+			else if($("#fail_div").length)
+			{
+				$("#fail_div").remove();
+			}
+			if(	$("#demand_submit").length)
+			{
+				$("#demand_submit").remove();
+			}
+			$demandForm = $("#demand_div");
+			$demandForm.removeClass("hidden");
+			$profil_img =  $(this).prev().prev().clone();
+			$profil_img.attr("id", "demand_profile_img");
+			$demandForm.find("#img_div").append($profil_img);
+			$name = $(this).parent().next().find(".info_div").find("h1").clone();
+			$demandForm.find("#img_div").append($name);
+			// Add a demand_submit with each click of the profil submit button.
+			if(!$("#demand_submit").length)
+			{
+				$("#demand_form").append('<button type="submit" id="demand_submit">Talebinizi Oluşturun</button>');
+			}
+			$("#introduction").focus();
+		})
+	});	
+		}, 500);
+
+
+		})
+		
+
 	$(".filter").on("change", function() 
 	{		
 		var inputVal = $("#search_input").val();
