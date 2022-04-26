@@ -1,6 +1,5 @@
 User-agent: *
-Disallow: /profil.php/
-Disallow: /uploads/
-Allow: /
-
-Sitemap: https://www.dersara.com.tr/sitemap.xml
+Allow: /index.html
+Allow: /sorular.html
+Allow: /sitemap.xml
+Disallow: /
