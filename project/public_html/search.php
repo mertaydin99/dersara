@@ -1175,6 +1175,7 @@ $(document).ready(function()
 			$profil_img =  $(this).prev().prev().clone();
 			$profil_img.attr("id", "demand_profile_img");
 			$demandForm.find("#img_div").append($profil_img);
+			$("#img_div").find("#demand_profile_img").removeClass("profil_img");
 			$name = $(this).parent().next().find(".info_div").find("h1").clone();
 			$demandForm.find("#img_div").append($name);
 			// Add a demand_submit with each click of the profil submit button.
@@ -1630,6 +1631,7 @@ $(document).ready(function()
 			$profil_img =  $(this).prev().prev().clone();
 			$profil_img.attr("id", "demand_profile_img");
 			$demandForm.find("#img_div").append($profil_img);
+			$("#img_div").find("#demand_profile_img").removeClass("profil_img");
 			$name = $(this).parent().next().find(".info_div").find("h1").clone();
 			$demandForm.find("#img_div").append($name);
 			// Add a demand_submit with each click of the profil submit button.
@@ -1815,6 +1817,7 @@ $(document).ready(function()
 			$profil_img =  $(this).prev().prev().clone();
 			$profil_img.attr("id", "demand_profile_img");
 			$demandForm.find("#img_div").append($profil_img);
+			$("#img_div").find("#demand_profile_img").removeClass("profil_img");
 			$name = $(this).parent().next().find(".info_div").find("h1").clone();
 			$demandForm.find("#img_div").append($name);
 			// Add a demand_submit with each click of the profil submit button.
