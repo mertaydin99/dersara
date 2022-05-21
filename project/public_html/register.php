@@ -7,8 +7,8 @@ $type = isset($_POST['type']) ? $_POST['type'] : '';
 $fname = trim(isset($_POST['fname']) ? $_POST['fname'] : '');
 $lname = trim(isset($_POST['lname']) ? $_POST['lname'] : '');
 $email = trim(isset($_POST['email']) ? $_POST['email'] : '');
+$telephone = trim(isset($_POST['telephone']) ? $_POST['telephone'] : '');
 $password = isset($_POST['password']) ? $_POST['password'] : '';
-
 
 // Validate input
 if (!preg_match("/^\S+\s?\@\S+\s?\.\S+\s?$/i", $email)){
@@ -16,7 +16,7 @@ if (!preg_match("/^\S+\s?\@\S+\s?\.\S+\s?$/i", $email)){
 }
 
 // If first name, last name, email , or password is empty stop the script
-if (empty($fname) || empty($lname) || empty($email) || empty($password)){
+if (empty($fname) || empty($lname) || empty($email) || empty($password) || empty($telephone) ){
   exit();
 }
 
@@ -24,7 +24,7 @@ if (strlen($password) < 8){
   exit();
 }
 
-if (strlen($fname) > 60 || strlen($lname) > 60 || strlen($email) > 255 || strlen($password) > 255){
+if (strlen($fname) > 60 || strlen($lname) > 60 || strlen($email) > 255 || strlen($password) > 255 || strlen($telephone) > 255){
   exit();
 }
 // Add salt and hash the password
@@ -109,8 +109,8 @@ $message .= "<br/><br/>Sitemizi tercih ettiğiniz için teşekkürler,<br/>dersa
   exit();
 }else if ($type === 'teacher'){
   // prepare and bind
-  $stmt = $conn->prepare("INSERT INTO teachers(fname, lname, email, password, token, status, last_sign_in) VALUES (?, ?, ?, ?, ?, ?, NOW())");
-  $stmt->bind_param("ssssss", $fname, $lname, $email, $password, $token, $status);
+  $stmt = $conn->prepare("INSERT INTO teachers(fname, lname, email, password, token, status, phone, last_sign_in) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
+  $stmt->bind_param("sssssss", $fname, $lname, $email, $password, $token, $status, $telephone);
   $stmt->execute();
   $mail = new PHPMailer\PHPMailer\PHPMailer();
  //Server settings

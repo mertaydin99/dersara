@@ -507,6 +507,13 @@ fieldset
 	margin-bottom: 3%;
 	margin: auto;
 }
+#sign_up_telephone{
+	display: block;
+	width: 62%;
+	height: 10%;
+	margin-bottom: 3%;
+	margin: auto;
+}
 #sign_up_pass
 {
 	display: inline-block;
@@ -654,7 +661,7 @@ label
 }
 .hidden
 {
-	display: none;
+	display: none !important;
 }
 
 /* Message explaining the situation after sign up or sign in*/
@@ -1261,6 +1268,7 @@ a.close {
 						<input type="text" placeholder="Adınız" name="fname" id="fname" class="sign_input" title="" />
 						<input type="text" placeholder="Soyadınız" name="lname" id="lname" class="sign_input" title="" ><br />
 						<input type="text" placeholder="E-posta adresiniz" name="email" id="sign_up_email" class="sign_input"  title=""/><br />
+						<input type="text" placeholder="Telefonunuz" name="telephone" id="sign_up_telephone" class="sign_input hidden" title="" /><br />
 						<div id="sign_up_pass_div">
 							<input type="password" placeholder="Şifreniz" name="password" id="sign_up_pass" class="sign_input" title="" />
 							<i class="far fa-eye toggle-password" id="sign_up_pass_show"></i>
@@ -1773,6 +1781,7 @@ $("#sign_up_form").submit(function(event)
 	var $fname = $("#fname");
 	var $lname = $("#lname");
 	var $email = $("#sign_up_email");
+	var $telephone = $("#sign_up_telephone");
 	var $password = $("#sign_up_pass");
 	var $passwordControl = $("#pass_control");
   
@@ -1780,6 +1789,7 @@ $("#sign_up_form").submit(function(event)
 	var fnameVal = $fname.val();
 	var lnameVal = $lname.val();
 	var emailVal = $email.val();
+	var telephoneVal = $telephone.val();
 	var passwordVal = $password.val();
 	var typeVal = $('input[name="type"]:checked').val();
 	var passwordControlVal = $passwordControl.val();
@@ -1850,6 +1860,18 @@ $("#sign_up_form").submit(function(event)
 	  $email[0].setCustomValidity("Lütfen daha kısa bir e-posta yazınız");
 	  $email[0].reportValidity();
 	}
+	if(!$("#sign_up_telephone").hasClass("hidden")) {
+		if(telephoneVal.length === 0){
+			valid = 0;
+	  		$telephone[0].setCustomValidity("Bu alanı doldurmanız gerekmektedir");
+	  		$telephone[0].reportValidity();
+		}
+		else if (telephoneVal.length > 255){
+	 		valid = 0;
+	  		$telephone[0].setCustomValidity("Lütfen daha kısa bir telefon numarası yazınız");
+	  		$telephone[0].reportValidity();
+		}
+	}
 	if (passwordVal.length === 0 )
 	{
 	  valid = 0;
@@ -1882,7 +1904,7 @@ $("#sign_up_form").submit(function(event)
 	else
 	{
 	  event.preventDefault();
-	  $.post("register.php", {type: typeVal, fname: fnameVal, lname: lnameVal, email: emailVal, password: passwordVal}, function(data) 
+	  $.post("register.php", {type: typeVal, fname: fnameVal, lname: lnameVal, email: emailVal, password: passwordVal, telephone: telephoneVal}, function(data) 
 	  {
 		  if (data == -1)
 		  {
@@ -2451,6 +2473,20 @@ $("#forgot_pass").on('click', function (){
 	}
 	$("#forgotten_form").removeClass('hidden');
 });
+$("#teacher").on("click", function() {
+	if($("#sign_up_telephone").hasClass("hidden")) {
+		$("#sign_up_telephone").removeClass("hidden");
+
+	}
+
+})
+$("#student").on("click", function() {
+	if(!$("#sign_up_telephone").hasClass("hidden")) {
+		$("#sign_up_telephone").addClass("hidden");
+
+	}
+
+})
 			</script>
 	</body>
 </html>
