@@ -17,4 +17,5 @@ Disallow: /resend.php
 Disallow: /sign_in.php
 Disallow: /upload.php
 Disallow: /index.html
-Allow: /Sitemap: https://www.dersara.com.tr/sitemap.xml
+Allow: /
+Sitemap: https://www.dersara.com.tr/sitemap.xml
