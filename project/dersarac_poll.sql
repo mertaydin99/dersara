@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 22, 2022 at 12:40 AM
+-- Generation Time: May 22, 2022 at 06:40 PM
 -- Server version: 8.0.27
 -- PHP Version: 7.4.29
 
@@ -39,6 +39,13 @@ CREATE TABLE `lesson_demands` (
   `user_id` int UNSIGNED NOT NULL,
   `date` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `lesson_demands`
+--
+
+INSERT INTO `lesson_demands` (`id`, `name`, `introduction`, `preference`, `who`, `email`, `telephone`, `user_id`, `date`) VALUES
+(91, 'Serkan', 'Yurt disina cikicagim icin ingilizce ogrensem iyi olcak diye dusundum', 'face2face', 'myself', 'serkan33tekin1994@icloud.com', '05529396309', 210, '2022-05-22 12:58:57');
 
 -- --------------------------------------------------------
 
@@ -78,7 +85,8 @@ INSERT INTO `profile` (`id`, `img_url`, `gender`, `title`, `introduction`, `city
 (160, '1651270089565337533622679700128mm429.jpg', 'm', 'Kpss eğitim bilimleri ', 'Yıllardır özel eğitim bilimleri(kpss) derslerini vermekteyim. (Ölçme ve değerlendirme,öğrenme psikolojisi, gelişim psikolojisi dersleri)', 34, 'Farketmez', 'face2face', 200, 'Ölçme ve değerlendirme\r\ngelişim psikolojisi\r\nÖğrenme psikolojisi ', 208),
 (161, '7832D7F7-3B10-4623-A1B3-CAB403BAE10Amm431.jpeg', 'f', 'Ingilizce-turkce ozel ders', 'Mutercim tercumanlik bolumundeyim, belge cevirisi, ingilizce ve turkce ozel dersleri uygun fiyata verebilirim.', NULL, NULL, 'online', 100, 'ingilizce turkce ozelders online ceviri odev', 209),
 (162, 'Ekran Resmi 2022-04-30 14.40.26mm433.png', 'f', 'İngilizce Özel Ders ', 'Adnan Menderes Üniversitesi İngilizce Öğretmenliği bölümünde okudum. Çocuklarla ve gençlerle çok iyi anlaşırım. Yaşlarımız yakın olduğu için derslerin anlaşılması kolay olur. 2018den beri özel ders veriyorum. 22 yaşındayım. Genel Üniversite ortalamam 3.15. ', 20, 'Pamukkale, Merkezefendi', 'both', 70, 'İngilizce-orta Öğretim \r\nİngilizce-lise \r\n', 210),
-(163, 'profil_imgmm439.png', 'f', 'Fizik ve Matematik Anlatıcısı', 'İstanbul Üniversitesi Fizik, İstanbul Ticaret Üniversitesi Endüstri Mühendisliği, Anadolu Üniversitesi    Çalışma Ekonomisi Ön Lisans eğitimlerine sahip Fizik ve Matematik Bilimini çok s even iyi bir öğretici', 34, 'Ataşehir Kadıköy Maltepe Kartal Ümraniye', 'both', 200, 'fizik matematik geometri lise ortaokul İlkokul', 213);
+(163, 'profil_imgmm439.png', 'f', 'Fizik ve Matematik Anlatıcısı', 'İstanbul Üniversitesi Fizik, İstanbul Ticaret Üniversitesi Endüstri Mühendisliği, Anadolu Üniversitesi    Çalışma Ekonomisi Ön Lisans eğitimlerine sahip Fizik ve Matematik Bilimini çok s even iyi bir öğretici', 34, 'Ataşehir Kadıköy Maltepe Kartal Ümraniye', 'both', 200, 'fizik matematik geometri lise ortaokul İlkokul', 213),
+(164, '7E554292-392F-4C50-85BE-6E42EF988062mm451.jpeg', 'f', 'Her yaş grubuna matematik dersi veriyorum', 'Manisa Celal Bayar Üniversitesi - Matematik Bölümü mezunuyum. 2 yıldır özel sektörde çalışmaktayım. Yaklaşık 4 yıldır her  yaş grubuna özel ders veriyorum. İlk ve ortaokul grubu  öğrencilerine matematiği sevdirerek öğretme amacındayım. Lise grubu öğrencilerimle birebir ve disiplinli bir program uyguluyorum.', 33, 'Yenişehir Toroslar Akdeniz ', 'both', 120, 'matematik ilkokul ortaokul lise ', 219);
 
 -- --------------------------------------------------------
 
@@ -151,7 +159,7 @@ INSERT INTO `teachers` (`id`, `fname`, `lname`, `email`, `password`, `token`, `s
 (205, 'çiğdem', 'uysal', 'cigdemjii@hotmail.com', '$2y$10$6Q6vj.siX2HzeN3MAfkLxeRaqk3vjwsfn2dGaj7hf2AFW5PlgkEG6', '', 1, '', '2022-04-16 21:20:37'),
 (206, 'FERHAT', 'ÇANAKCI', 'frhtcnkc1@gmail.com', '$2y$10$ZuCefxLpf9lAJPhqlTVPW.lntYvfjBnzdjllmxx2JwouhGMpKH1JS', '', 1, '', '2022-04-18 07:30:23'),
 (207, 'Erkan', 'Atmaca', 'erkanatmaca4242@gmail.com', '$2y$10$NiXmyMF5.kV8eGsDUR.UDejysZkJh734cii0goQUuRbewNEsSTugm', '', 1, '', '2022-04-29 07:10:12'),
-(208, 'Serdar', 'Svn', 'serdarsrdrsvn@gmail.com', '$2y$10$AkKqnZ4czLCpZ4JT8rzWMuaMLIbN7fzyHZNSMAeZ278AviUYObrTy', '', 1, '', '2022-05-09 16:55:39'),
+(208, 'Serdar', 'Svn', 'serdarsrdrsvn@gmail.com', '$2y$10$AkKqnZ4czLCpZ4JT8rzWMuaMLIbN7fzyHZNSMAeZ278AviUYObrTy', '', 1, '', '2022-05-22 07:31:52'),
 (209, 'Eylul', 'Kebapcigil', 'eylulkebapcigil@icloud.com', '$2y$10$OvpLZ5d24X8fYiUpI6xey.ENry/AZDMXVBrgagT9qfVppZ6PRq4Ym', '', 1, '', '2022-04-30 10:29:13'),
 (210, 'Elif', 'Çelik', 'elifc7138@gmail.com', '$2y$10$3FIQnMk0jVa5R5uqILibk.c3VYmqUuh6YP/F6JZiSitzhUQGeFykW', '', 1, '', '2022-04-30 12:33:04'),
 (211, 'Elif', 'Bahçeci', 'bahcecielif88@gmail.com', '$2y$10$ZcGXfYJPfLnG848PgA0dCeM5P12xfTM74pPZfnTD/5R.IWUy/.gYC', '', 1, '', '2022-04-30 21:59:56'),
@@ -159,7 +167,9 @@ INSERT INTO `teachers` (`id`, `fname`, `lname`, `email`, `password`, `token`, `s
 (213, 'sevgi', 'güler', 'sevginim@gmail.com', '$2y$10$OKjHpN64nn34oUKM8lTk4Op24dvw24wsCih4lE0F/dLGfjZxr0mh2', '', 1, '', '2022-05-05 12:23:18'),
 (214, 'qwer', 'qwer', 'qwer@qwer.com', '$2y$10$P6j9YLd6xz25FmDb89m7jOwp6JN64Qx6Eli5FJdsbqiIHPnnTwXqi', 'e3dfc95d34234071fbe57b57cff912b9', 0, '', '2022-05-06 12:04:59'),
 (215, 'Ezgi Nurefşan', 'Ersoy', 'ezgierdıy26.ee@gmail.com', '$2y$10$pr1APeqEms3KpETEHH8n8OLKMNDLru36t0u6HfjmhATCpuxC0lqKC', '7fcb6315be8d62b17137ed654884594f', 0, '', '2022-05-20 18:41:58'),
-(216, 'Ezgi Nurefşan', 'Ersoy', 'ezgiersoy26.ee@gmail.com', '$2y$10$9AxTiG1KzVYLrZ0gw.PwdesMdOdNjaUiwA1B0XmmdmHlCWCvl4.a2', '', 1, '', '2022-05-20 18:58:39');
+(216, 'Ezgi Nurefşan', 'Ersoy', 'ezgiersoy26.ee@gmail.com', '$2y$10$9AxTiG1KzVYLrZ0gw.PwdesMdOdNjaUiwA1B0XmmdmHlCWCvl4.a2', '', 1, '', '2022-05-20 18:58:39'),
+(218, 'Abdullah', 'Ateş', 'eaates2016@gmail.com', '$2y$10$MbO0cDhVlzeuk5oELsKcPu7JrGSGFoG7lqe0yW0pW9imAQrAinToC', '', 1, '05538550342', '2022-05-22 05:43:56'),
+(219, 'Işık', 'Yedigöz', 'iskydgz@gmail.com', '$2y$10$Yi1P4OmiNwLOp7f5/fRXw.FCr.V05CKghdRb32AvgLFN0oXpnriUa', '', 1, '05551810461', '2022-05-22 10:58:08');
 
 --
 -- Indexes for dumped tables
@@ -207,13 +217,13 @@ ALTER TABLE `teachers`
 -- AUTO_INCREMENT for table `lesson_demands`
 --
 ALTER TABLE `lesson_demands`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
 
 --
 -- AUTO_INCREMENT for table `students`
@@ -225,7 +235,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=218;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
 
 --
 -- Constraints for dumped tables
