@@ -1,7 +1,7 @@
 <?php
 // This script gets profiles of teachers
 $keyword = $_GET['keyword'];
-$keyword = $keyword;
+$keyword = '+' . implode(' +',explode(' ',$keyword));
 
 // Create a database connection 
 $servername = "127.0.0.1";
@@ -20,7 +20,7 @@ if ($conn->connect_error)
 }
 
 // Get the profile info
-$stmt = $conn->prepare("SELECT teachers.fname, LEFT(teachers.lname, 1) AS lname, teachers.email, profile.img_url, profile.gender, profile.title, profile.introduction, profile.preference, profile.price FROM profile INNER JOIN teachers ON profile.user_id = teachers.id WHERE (MATCH(profile.keyword) AGAINST(?) OR MATCH(profile.introduction) AGAINST(?)) ORDER BY RAND() DESC LIMIT 300");
+$stmt = $conn->prepare("SELECT teachers.fname, LEFT(teachers.lname, 1) AS lname, teachers.email, profile.img_url, profile.gender, profile.title, profile.introduction, profile.preference, profile.price FROM profile INNER JOIN teachers ON profile.user_id = teachers.id WHERE (MATCH(profile.keyword) AGAINST(? IN BOOLEAN MODE) OR MATCH(profile.introduction) AGAINST(? IN BOOLEAN MODE)) ORDER BY RAND() DESC LIMIT 300");
 $stmt->bind_param("ss", $keyword, $keyword);
 $stmt->execute();
 $result = $stmt->get_result(); // get the mysqli result
